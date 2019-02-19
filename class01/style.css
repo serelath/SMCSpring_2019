@@ -3,3 +3,12 @@ p {
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
 }
+a {
+    transition: 0.1s;
+}
+.grey {
+    color: #666;
+}
+.grey:hover {
+    color: #333;
+}
