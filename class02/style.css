@@ -1,0 +1,12 @@
+.container {
+    background-color: #A4D6D2;
+}
+.row {
+    background-color: #F2DF8A;
+}
+.col-6:first-child {
+    background-color: #E0807D;
+}
+.col-6:last-child {
+    background-color: #B799C6;
+}
