@@ -9,7 +9,7 @@ var rename = require('gulp-rename');
 var changed = require('gulp-changed');
 
 /// SCSS/CSS
-var SCSS_SRC = './src/Assets/scss/**/*.scss';
+var SCSS_SRC = './src/Assets/scss/*.scss';
 var SCSS_DEST = './src/Assets/css';
 
 // Compile SCSS
