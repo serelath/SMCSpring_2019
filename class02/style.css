@@ -1,5 +1,4 @@
 .container {
-    background-color: #B799C6;
 }
 .row {
     background-color: #F2DF8A;
@@ -9,4 +8,20 @@
 }
 [class^="col-"]:last-child {
     background-color: #A4D6D2;
+}
+a {
+    transition: 0.1s;
+}
+.fa {
+    width: 30px;
+    height: 30px;
+    padding-top: 7px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.fa:hover {
+    text-decoration: none;
+    color: rgba(255,255,255,.5) !important;
+    border: 1px solid rgba(255,255,255,.5);
 }
