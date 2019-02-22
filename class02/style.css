@@ -1,16 +1,15 @@
 .container {
 }
-.row {
-    background-color: #F2DF8A;
-}
-[class^="col-"]:first-child {
-    background-color: #E08B88;
-}
-[class^="col-"]:last-child {
-    background-color: #A4D6D2;
-}
 a {
-    transition: 0.1s;
+    transition: 0.3s;
+}
+.jumbotron {
+    height: 50vh;
+    background: url("images/four.jpg") no-repeat center top;
+}
+.card img {
+    height: 250px;
+    object-fit: cover;
 }
 .fa {
     width: 30px;
