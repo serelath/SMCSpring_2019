@@ -52,6 +52,14 @@ a:hover {
     color: rgba(146, 149, 196, 1) !important;
     border: 1px solid rgba(146, 149, 196, 1) !important;
 }
+.bg-darker {
+    background-color: #26292d;
+}
+@media only screen and (min-width: 992px) {
+    .customer-review > div > .card {
+        min-height: 200px;
+    }
+}
 @media only screen and (max-width: 992px) {
     .jumbotron {
     height: 95vh;
