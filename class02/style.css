@@ -1,7 +1,15 @@
-.container {
+* {
+    font-family: 'Open Sans', sans-serif;
 }
 a {
     transition: 0.3s;
+}
+a:hover {
+    color: rgba(146, 149, 196, 1) !important;
+}
+.navbar-brand {
+    font-family: 'Sacramento', sans-serif;
+    font-size: 30px;
 }
 .jumbotron {
     height: 50vh;
@@ -11,6 +19,14 @@ a {
     height: 250px;
     object-fit: cover;
 }
+.btn-dark {
+    transition: 0.3s;
+}
+.btn-dark:hover {
+    background-color: rgba(146, 149, 196, 1);
+    color: white !important;
+    border: 1px solid rgba(146, 149, 196, 1);
+}
 .fa {
     width: 30px;
     height: 30px;
@@ -18,9 +34,17 @@ a {
     text-align: center;
     border: 1px solid white;
     border-radius: 50%;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.fa:first-child {
+    margin-left: 0px;
+}
+.fa:last-child {
+    margin-right: 0px;
 }
 .fa:hover {
     text-decoration: none;
-    color: rgba(255,255,255,.5) !important;
-    border: 1px solid rgba(255,255,255,.5);
+    color: rgba(146, 149, 196, 1) !important;
+    border: 1px solid rgba(146, 149, 196, 1);
 }
