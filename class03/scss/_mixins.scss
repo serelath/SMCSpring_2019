@@ -1,0 +1,16 @@
+@mixin position($p) {
+    -webkit-position: ($p);
+    -moz-position: ($p);
+    -ms-position: ($p);
+    position: ($p);
+}
+@mixin mQXL($arg) {
+    @media screen and (min-width: $arg) {
+        @content
+    }
+}
+@mixin mQSM($arg) {
+    @media screen and (max-width: $arg) {
+        @content
+    }
+}

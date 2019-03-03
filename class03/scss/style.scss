@@ -1,2 +1,106 @@
-@import 'mixins.scss';
-@import 'variables.scss';
+@import '_mixins.scss';
+@import '_variables.scss';
+
+body, html {
+    overflow-x: hidden;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+.container {
+    @include mQXL(1200px) {
+        max-width: 1600px;
+    }
+}
+a {
+    font-size: 0.9rem;
+}
+h2 {
+    line-height: 1.1;
+}
+.featurette-heading, .navbar-brand {
+    font-family: 'Cormorant Garamond', sans-serif;
+}
+.text-muted {
+    color: $muted !important;
+}
+.text-em {
+    color: white;
+}
+.navbar {
+    @include position(fixed);
+    z-index: 10;
+    width: 100vw;
+    .navbar-brand {
+        font-size: 2rem;
+        letter-spacing: -2px;
+        @include position(relative);
+        top: -1px;
+    }
+    .navbar-nav li:hover>.dropdown-menu {
+      display: block;
+    }
+}
+.carousel {
+    overflow: hidden;
+    margin-top: 74px;
+    @include mQSM(992px) {
+        height: calc(100vh - 71px);
+        margin-top: 71px;
+    }
+    .carousel-item {
+        @include mQSM(992px) {
+            height: calc(100vh - 71px);
+        }
+        height: 300px;
+        color: white;
+        
+        &:first-child {
+            background-color: $dark-1;
+        }
+        &:nth-child(2){
+            background-color: $dark-3;
+        }
+        &:nth-child(3){
+            background-color: $dark-2;
+        }
+        .falling-colors {
+            display: inline-flex;
+            justify-content: space-between;
+            div {
+                width: 15%;
+                height: 100vh;
+                display: inline-block;
+                @include position(relative);
+                
+                &:first-child {
+                    background-color: red;
+                    top: 20px;
+                }
+                &:nth-child(2) {
+                    background-color: green;
+                    top: 30px;
+                }
+                &:nth-child(3) {
+                    background-color: green;
+                    top: 10px;
+                }
+                &:nth-child(4) {
+                    background-color: green;
+                    top: 50px;
+                }
+                &:nth-child(5) {
+                    background-color: green;
+                    top: 15px;
+                }
+            }
+        }
+    }
+    .carousel-control-prev, .carousel-control-next {
+        opacity: 0;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
