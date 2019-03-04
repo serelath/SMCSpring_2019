@@ -19,17 +19,10 @@ body, html {
   body .text-em, html .text-em {
     color: white; }
 
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1500px; } }
-
 .navbar {
-  -webkit-position: fixed;
-  -moz-position: fixed;
-  -ms-position: fixed;
-  position: fixed;
   z-index: 10;
-  width: 100vw; }
+  width: 100vw;
+  background-color: #212325; }
   .navbar .navbar-brand {
     font-size: 2rem;
     letter-spacing: -2px;
@@ -42,23 +35,19 @@ body, html {
     display: block; }
 
 .carousel {
-  overflow: hidden;
-  margin-top: 74px; }
+  overflow: hidden; }
   @media screen and (max-width: 992px) {
     .carousel {
-      height: calc(100vh - 71px);
-      margin-top: 71px; } }
+      height: 100vh; } }
   .carousel .carousel-item {
     height: 310px;
     color: white; }
     @media screen and (max-width: 992px) {
       .carousel .carousel-item {
-        height: calc(100vh - 71px); } }
+        height: 100vh; } }
     .carousel .carousel-item:first-child {
       background-color: #212325; }
     .carousel .carousel-item:nth-child(2) {
-      background-color: #111112; }
-    .carousel .carousel-item:nth-child(3) {
       background-color: #191a1b; }
     .carousel .carousel-item .falling-colors, .carousel .carousel-item .rainbow {
       display: -webkit-inline-box;
@@ -68,7 +57,7 @@ body, html {
       -ms-flex-pack: justify;
       justify-content: space-between; }
     .carousel .carousel-item .falling-colors div {
-      width: 15%;
+      width: 12%;
       height: 100vh;
       display: inline-block;
       -webkit-position: relative;
@@ -89,6 +78,9 @@ body, html {
         top: 50px; }
       .carousel .carousel-item .falling-colors div:nth-child(5) {
         background-color: #6E3FB7;
+        top: 15px; }
+      .carousel .carousel-item .falling-colors div:nth-child(6) {
+        background-color: #FF9D46;
         top: 15px; }
     .carousel .carousel-item .rainbow div {
       width: 5%;
@@ -135,3 +127,6 @@ body, html {
     opacity: 0; }
     .carousel .carousel-control-prev:hover, .carousel .carousel-control-next:hover {
       opacity: 0.5; }
+
+footer {
+  padding-bottom: 71px; }

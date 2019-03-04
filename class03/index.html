@@ -19,7 +19,7 @@
   <body>
    
     <!--NAVBAR-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2 px-lg-3 px-4">
+    <nav class="navbar navbar-expand-lg navbar-dark py-2 px-lg-3 px-4 fixed-bottom">
      <div class="container">
       <a class="navbar-brand" href="#">Willow</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,17 +30,9 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Palettes</a>
           </li>
-           <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Themes
-            </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Dark</a>
-                <a class="dropdown-item" href="#">Serene</a>
-                <a class="dropdown-item" href="#">Neutral</a>
-                <a class="dropdown-item" href="#">Elegant</a>
-              </div>
-            </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Themes</a>
+          </li>
         </ul>
         <span class="navbar-text my-xs-1 my-2">
             <a href="#" class="fa fa-facebook text-muted"></a>
@@ -63,12 +55,13 @@
           <!-- START THE FEATURETTES -->
             <div class="container mt-5 py-xs-5 py-0">
                 <div class="row featurette">
-                  <div class="col-lg-5 col-sm-10 col-12 offset-lg-1 text-lg-left text-center mb-lg-5 mb-4 mx-auto">
+                  <div class="col-lg-7 col-sm-10 col-12 text-lg-left text-center mb-lg-5 mb-4 mx-auto">
                     <h3 class="featurette-heading text-muted mb-0">Color palettes handcrafted <br class="d-lg-none">from our</h3>
                     <h2 class="text-em">Color Laboratory</h2>
                     <p class="text-muted">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
                   </div>
-                  <div class="col-lg-4 col-sm-8 col-10 mt-3 mx-auto falling-colors">
+                  <div class="col-lg-5 col-sm-8 col-10 mt-3 mx-auto falling-colors">
+                        <div></div>
                         <div></div>
                         <div></div>
                         <div></div>
@@ -83,7 +76,7 @@
         <div class="carousel-item">
           <div class="container mt-5 py-xs-5 py-0">
               <div class="row featurette">
-                 <div class="col-sm-10 col-12 offset-lg-1 text-center mb-lg-5 mb-4 mx-auto">
+                 <div class="col-sm-10 col-12 text-center mb-lg-5 mb-4 mx-auto">
                       <h2 class="featurette-heading text-muted">Powered by the <span class="text-em">Rainbow</span></h2>
                       <p class="text-muted">Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
                   </div>
@@ -120,8 +113,86 @@
     
     <div class="container mt-5">
        <div class="row">
-            <div class="col-lg-9 col-sm-2 col-12"></div>
-            <div class="col-lg-3 col-sm-10 col-12 mx-auto">
+            <div class="col-lg-8 col-sm-10 col-12 mx-auto">
+            
+            <!--TABLE-->
+            <h3 class="text-lg-left text-center mb-3">Top Color Palettes</h3>
+            <table class="table table-striped table-dark mb-5">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Theme</th>
+                  <th scope="col">Likes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Ocean</td>
+                  <td>Serene</td>
+                  <td>367</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Creation</td>
+                  <td>Dark</td>
+                  <td>345</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Pink</td>
+                  <td>Pastel</td>
+                  <td>312</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Dreamland</td>
+                  <td>Serene</td>
+                  <td>299</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Bare</td>
+                  <td>Neutral</td>
+                  <td>285</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Tasty</td>
+                  <td>Bold</td>
+                  <td>256</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>Naturia</td>
+                  <td>Serene</td>
+                  <td>242</td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td>Night Light</td>
+                  <td>Dark</td>
+                  <td>225</td>
+                </tr>
+                <tr>
+                  <th scope="row">9</th>
+                  <td>Twisted</td>
+                  <td>Dark</td>
+                  <td>215</td>
+                </tr>
+                <tr>
+                  <th scope="row">10</th>
+                  <td>Cornfield</td>
+                  <td>Bold</td>
+                  <td>206</td>
+                </tr>
+              </tbody>
+            </table>
+            <!--TABLE END -->
+            
+            </div>
+            <div class="col-lg-4 col-sm-10 col-12 mx-auto">
             
             <!--MEDIA-->
                <h3 class="text-lg-left text-center mb-3">Our Color Chemists</h3>
@@ -150,9 +221,12 @@
                 </ul>
             <!--MEDIA END-->
             
+            
             </div>
         </div>
     </div>
+    
+    <footer></footer>
 
 
 
