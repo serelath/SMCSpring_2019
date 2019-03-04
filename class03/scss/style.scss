@@ -6,26 +6,35 @@ body, html {
     font-size: 16px;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+    
+    // TEXT
+    a, .media-body {
+        font-size: 0.9rem;
+    }
+    h2 {
+        line-height: 1.1;
+    }
+    h2, .navbar-brand {
+        font-family: 'Cormorant Garamond', sans-serif;
+    }
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 300 !important;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+    .text-muted {
+        color: $muted !important;
+    }
+    .text-em {
+        color: white;
+    }
 }
 .container {
     @include mQXL(1200px) {
-        max-width: 1600px;
+        max-width: 1500px;
     }
-}
-a {
-    font-size: 0.9rem;
-}
-h2 {
-    line-height: 1.1;
-}
-.featurette-heading, .navbar-brand {
-    font-family: 'Cormorant Garamond', sans-serif;
-}
-.text-muted {
-    color: $muted !important;
-}
-.text-em {
-    color: white;
 }
 .navbar {
     @include position(fixed);
@@ -52,7 +61,7 @@ h2 {
         @include mQSM(992px) {
             height: calc(100vh - 71px);
         }
-        height: 300px;
+        height: 310px;
         color: white;
         
         &:first-child {
@@ -64,9 +73,11 @@ h2 {
         &:nth-child(3){
             background-color: $dark-2;
         }
-        .falling-colors {
+        .falling-colors, .rainbow {
             display: inline-flex;
             justify-content: space-between;
+        }
+        .falling-colors {
             div {
                 width: 15%;
                 height: 100vh;
@@ -74,24 +85,77 @@ h2 {
                 @include position(relative);
                 
                 &:first-child {
-                    background-color: red;
+                    background-color: $yellow;
                     top: 20px;
                 }
                 &:nth-child(2) {
-                    background-color: green;
+                    background-color: $blue;
                     top: 30px;
                 }
                 &:nth-child(3) {
-                    background-color: green;
+                    background-color: $red;
                     top: 10px;
                 }
                 &:nth-child(4) {
-                    background-color: green;
+                    background-color: $green;
                     top: 50px;
                 }
                 &:nth-child(5) {
-                    background-color: green;
+                    background-color: $purple;
                     top: 15px;
+                }
+            }
+        }
+        .rainbow {
+            div {
+                width: 5%;
+                height: 100vh;
+                display: inline-block;
+                @include position(relative);
+
+                &:first-child {
+                    background-color: $purple;
+                    top: 80px;
+                }
+                &:nth-child(2) {
+                    background-color: $blue;
+                    top: 55px;
+                }
+                &:nth-child(3) {
+                    background-color: $green;
+                    top: 35px;
+                }
+                &:nth-child(4) {
+                    background-color: $yellow;
+                    top: 20px;
+                }
+                &:nth-child(5) {
+                    background-color: $orange;
+                    top: 10px;
+                }
+                &:nth-child(6) {
+                    background-color: $red;
+                    top: 5px;
+                }
+                &:nth-child(7) {
+                    background-color: $orange;
+                    top: 10px;
+                }
+                &:nth-child(8) {
+                    background-color: $yellow;
+                    top: 20px;
+                }
+                &:nth-child(9) {
+                    background-color: $green;
+                    top: 35px;
+                }
+                &:nth-child(10) {
+                    background-color: $blue;
+                    top: 55px;
+                }
+                &:nth-child(11) {
+                    background-color: $purple;
+                    top: 80px;
                 }
             }
         }
