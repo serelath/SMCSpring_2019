@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Class 04</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+   <div>
+        <p id="text1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <button class="change_color" id="button1_1">Color Me!</button>
+        <button class="hide_text" id="button1_2">Hide Me!</button>
+    </div>
+    
+    <div>
+        <p id="text2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <button class="change_color" id="button2_1">Color Me!</button>
+        <button class="hide_text" id="button2_2">Hide Me!</button>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+    <script>
+        
+        $(document).ready(function() {
+           
+            $(".change_color").click(function() {
+                
+                var redVal = Math.random()* 100 + 155;
+                var greenVal = Math.random()* 100 + 155;
+                var blueVal = Math.random()* 55 + 200;
+                
+                $(this).siblings("p").css("background-color", "rgba(" + redVal + "," + greenVal + "," + blueVal + ")");
+            })
+            
+            $(".hide_text").click(function() {
+                $(this).siblings("p").hide();
+            })
+            
+        });
+        
+    </script>
+    
+    <script>
+        
+//        var text1 = document.getElementById("text1");
+//        var text2 = document.getElementById("text2");
+//        
+//        var colorButton1 = document.getElementById("button1_1");
+//        var colorButton2 = document.getElementById("button2_1");
+//        
+//        var displayButton1 = document.getElementById("button1_2");
+//        var displayButton2 = document.getElementById("button2_2");
+//        
+//        
+//        var changeColor = function(textElement) {
+//            
+//            var redVal = Math.random()* 100 + 155;
+//            var greenVal = Math.random()* 100 + 155;
+//            var blueVal = Math.random()* 55 + 200;
+//
+//            textElement.style.backgroundColor = "rgba(" + redVal + "," + greenVal + "," + blueVal + ")";
+//            
+//        }
+//        
+//        var hideText = function(textElement) {
+//            
+//            textElement.style.display = "none";
+//        }
+//        
+//        colorButton1.addEventListener("click", function(){changeColor(text1)});
+//        colorButton2.addEventListener("click", function(){changeColor(text2)});
+//        
+//        displayButton1.addEventListener("click", function(){hideText(text1)});
+//        displayButton2.addEventListener("click", function(){hideText(text2)});
+        
+        
+    </script>
+</body>
+</html>
