@@ -36,7 +36,12 @@
             })
             
             $(".hide_text").click(function() {
-                $(this).siblings("p").hide();
+                if ($(this).siblings("p").css("display") === "none" ) {
+                    $(this).text("Hide Me!");
+                } else {
+                    $(this).text("Show Me!");
+                }
+                $(this).siblings("p").toggle();
             })
             
         });
