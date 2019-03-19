@@ -90,6 +90,7 @@ body {
                 max-height: 90%;
                 background-color: $red;
                 top: 40% !important;
+                transition: 0.2s;
                 @include centerer;
                 @include circle(25vmin);
                 
@@ -107,11 +108,36 @@ body {
                     }
                 }
             }
+            
+            
             //customizer
+            
+            //buttons
+            .custom-buttons {
+                position: absolute;
+                bottom: 130px;
+                
+                button {
+                    border: none;
+                    color: $white !important;
+                    border-radius: 30px;
+                    font-family: $textFont;
+                    &:first-child {
+                        background-color: $lavender;
+                    }
+                    &:nth-child(2) {
+                        background-color: $red;
+                    }
+                }
+            }
+            
+            //menu
             #customize {
                 background-color: $darkBeige;
                 position: absolute;
                 bottom: -1px;
+                
+                //menu
                 
                 .customizer {
                     border: 1px solid $white;

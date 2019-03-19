@@ -37,6 +37,11 @@
                                     <div></div>
                                 </div>
                             </div>
+                            <!-- Custom Buttons -->
+                           <div class="col-12 custom-buttons text-right">
+                               <button id="random">Random</button>
+                               <button id="reset">Reset</button>
+                           </div>
                             <!-- Customize Menu -->
                             <div id="customize" class="col-12 p-3">
                                 <div class="customizer text-center col-6">
@@ -110,6 +115,32 @@
         
         $(document).ready(function() {
             
+            //random
+            $('#random').click(function() {
+                var hueRandom = Math.random()*360;
+                var lightRandom = Math.random()*1 + 0.25;
+                var borderRandom = Math.random()*50;
+                var scaleRandom = Math.random()*1.25 + 0.5;
+                var randomize = {
+                    'filter' : 'hue-rotate(' + hueRandom + 'deg) brightness(' + lightRandom +')',
+                    'border-radius' : borderRandom + '%',
+                    'transform' : 'translate(-50%, -50%) scale(' + scaleRandom + ')',
+                };
+                
+               $("#blob").css(randomize); 
+                $(".eyes div").css(reset);
+            });
+            
+            //reset
+            $('#reset').click(function() {
+                            var reset = {
+                'filter' : '',  
+                'border-radius' : '',
+                'transform' : 'translate(-50%, -50%)',
+            };
+                
+                $("#blob").css(reset);
+            })
         });
         
     </script>

@@ -86,6 +86,9 @@ body {
         max-height: 90%;
         background-color: #A8646F;
         top: 40% !important;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -106,6 +109,18 @@ body {
             left: 24%; }
           .container #content-area #blob-container #blob .eyes div:nth-child(2) {
             right: 24%; }
+      .container #content-area #blob-container .custom-buttons {
+        position: absolute;
+        bottom: 130px; }
+        .container #content-area #blob-container .custom-buttons button {
+          border: none;
+          color: #F9FFFD !important;
+          border-radius: 30px;
+          font-family: "Roboto Slab", serif; }
+          .container #content-area #blob-container .custom-buttons button:first-child {
+            background-color: #978CAF; }
+          .container #content-area #blob-container .custom-buttons button:nth-child(2) {
+            background-color: #A8646F; }
       .container #content-area #blob-container #customize {
         background-color: #535657;
         position: absolute;
