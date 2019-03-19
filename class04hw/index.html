@@ -39,6 +39,7 @@
                             </div>
                             <!-- Custom Buttons -->
                            <div class="col-12 custom-buttons text-right">
+                              <button id="move">Move</button>
                                <button id="random">Random</button>
                                <button id="reset">Reset</button>
                            </div>
@@ -107,7 +108,7 @@
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
@@ -115,8 +116,23 @@
         
         $(document).ready(function() {
             
+            $(window).resize(function(){
+                if (window.matchMedia("(min-width: 992px)").matches){	
+                    $('.nav-tabs li a').click(function() {
+                        alert("This menu is only currently available in mobile/small screens. Please reduce screen size and refresh.");
+                    }); 
+                }	
+            });
+            
+            //move
+            $('#move').click(function() {
+                  $("#blob").animate({left: '400px'}); 
+                alert("Refresh to reset position");
+            });
+            
             //random
             $('#random').click(function() {
+                
                 var hueRandom = Math.random()*360;
                 var lightRandom = Math.random()*1 + 0.25;
                 var borderRandom = Math.random()*50;

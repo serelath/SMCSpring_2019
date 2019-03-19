@@ -121,6 +121,8 @@ body {
             background-color: #978CAF; }
           .container #content-area #blob-container .custom-buttons button:nth-child(2) {
             background-color: #A8646F; }
+          .container #content-area #blob-container .custom-buttons button:nth-child(3) {
+            background-color: #4F646F; }
       .container #content-area #blob-container #customize {
         background-color: #535657;
         position: absolute;
