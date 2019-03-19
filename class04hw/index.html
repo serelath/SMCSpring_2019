@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Class 04</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--MY STYLESHEET-->
+    <link rel="stylesheet" href="styles/css/style.css" type="text/css">
+    
+    <!--GOOGLE FONT-->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+   <div class="container p-3">
+     <!-- HEADER -->
+      <header class="text-center col-lg-6 col-md-8 col-12 p-3">
+          <h1 class="mb-md-2 mb-1">Dress Up <span>Blob</span></h1>
+          <h2>A blob's first ever dream makeover</h2>
+      </header>
+      
+      <!-- TABS START -->
+       <div class="row mt-md-5 mt-3 px-3">
+           <div id="content-area" class="col-md-9 col-12">
+                <div class="tab-content">
+                  <div id="create" class="tab-pane fade in active">
+                    <div class="row">
+                      
+                       <!-- BLOB PANEL -->
+                        <div id="blob-container" class="px-0 col-12 mx-auto">
+                           <!-- THE BLOB -->
+                            <div id="blob">
+                                <div class="eyes">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <!-- Customize Menu -->
+                            <div id="customize" class="col-12 p-3">
+                                <div class="customizer text-center col-6">
+                                    <h3 class="px-1">Color</h3>
+                                    <div class="options pt-3 pb-1">
+                                       <div class="col-12">
+                                          <button class="minus">-</button>
+                                           <p id="color">Red</p>
+                                           <button class="plus">+</button>
+                                       </div>
+                                       <div class="col-12">
+                                          <button class="minus">-</button>
+                                           <p id="hue">Hue (<span id="hue-val">50</span>%)</p>
+                                           <button class="plus">+</button>
+                                       </div>
+                                        <div class="col-12">
+                                          <button class="minus">-</button>
+                                           <p id="light">Light (<span id="light-val">50</span>%)</p>
+                                           <button class="plus">+</button>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="customizer text-center col-6">
+                                    <h3 class="px-1">Shape</h3>
+                                    <div class="options pt-3 pb-1">
+                                       <div class="col-12">
+                                          <button class="minus">-</button>
+                                           <p id="shape">Circle</p>
+                                           <button class="plus">+</button>
+                                       </div>
+                                       <div class="col-12">
+                                          <button class="minus">-</button>
+                                           <p id="size">Size (<span id="size-val">50</span>%)</p>
+                                           <button class="plus">+</button>
+                                       </div>
+                                       <div class="col-12">
+                                          <button class="minus">-</button>
+                                           <p id="round">Round (<span id="round-val">100</span>%)</p>
+                                           <button class="plus">+</button>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div id="signup" class="tab-pane fade">
+                    <!-- SIGNUP PANEL -->
+                    <h3>Menu 1</h3>
+                    <p>Some content in menu 1.</p>
+                  </div>
+                </div>
+            </div>
+            <!-- TABS MENU -->
+            <div class="col-12 mt-md-5 mt-2 mb-3 px-0">
+                <ul class="nav nav-tabs justify-content-center mt-3">
+                  <li class="active mr-md-0 mr-2"><a class="py-3 px-4" data-toggle="tab" href="#create">Create Blob</a></li>
+                  <li><a class="py-3 px-4" data-toggle="tab" href="#signup">Pageant Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script>
+        
+        $(document).ready(function() {
+            
+        });
+        
+    </script>
+</body>
+</html>

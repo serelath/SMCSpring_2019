@@ -1,0 +1,237 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+* {
+    @include boxSizing;
+    color: $black !important;
+}
+html {
+    font-size: 14px;
+    @include mQ($md) {
+        font-size: 13px;
+    }
+}
+body {
+    background-color: $black;
+    overflow-x:hidden;
+}
+.container {
+    background-color: $lightBeige;
+    @include centerer;
+    @include mQ($xs) {
+        height: 100%;
+    }
+    
+    //header
+    header {
+        top: -75px;
+        background-color: $white;
+        border: 10px solid $darkBeige;
+        @include centerX;
+        
+        @include mQ($xs) {
+            position: relative;
+            top: 0;
+        }
+        
+        h1 {
+            font-family: $headerFont;
+            font-size: 2.8rem;
+            position: relative;
+            left: -0.05rem;
+            
+            span {
+                position: relative;
+                left: 0.1rem;
+                z-index: 1;
+                text-shadow: 2px 2px rgba(0,0,0, 0.2);
+            
+                &::before {
+                    content: "";
+                    @include centerer;
+                    width: 115%;
+                    height: 75%;
+//                    height: 1rem;
+                    background-color: $lightRed;
+                    z-index: -1;
+                    border-radius: 50px;
+                    box-shadow: inset 2px 2px rgba(0,0,0, 0.2);
+                }
+            }
+        }
+    }
+    h2 {
+            font-family: $textFont;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+        }//header end
+    
+    //content
+    #content-area {
+        background-color: $black;
+        height: 50vmin;
+        min-height: 250px;
+        
+            
+        @include mQ($sm) {
+            height: calc(100vh - 225px);
+        }
+
+        //blob start
+        #blob-container {
+            position: relative;
+            @include mQ($sm) {
+                height: calc(100vh - 225px);
+            }
+            
+            #blob {
+                max-width: 90%;
+                max-height: 90%;
+                background-color: $red;
+                top: 40% !important;
+                @include centerer;
+                @include circle(25vmin);
+                
+                .eyes div {
+                    @include circle(3vmin);
+                    background-color: $black;
+                    position: absolute;
+                    top: 40%;
+                    
+                    &:first-child {
+                        left: 24%;
+                    }
+                    &:nth-child(2) {
+                        right: 24%;
+                    }
+                }
+            }
+            //customizer
+            #customize {
+                background-color: $darkBeige;
+                position: absolute;
+                bottom: -1px;
+                
+                .customizer {
+                    border: 1px solid $white;
+                    position: relative;
+                    float: left;
+                    @include mQ($xxs) {
+                        max-width: 50% !important;
+                        &:nth-child(3) {
+                            display: none;
+                        }
+                    }
+                    
+                    h3 {
+                        font-family: $headerFont;
+                        color: $white !important;
+                        font-size: 1.2rem;
+                        position: absolute;
+                        top: -10px;
+                        left: 10%;
+                        background-color: $darkBeige;
+                        @include mQ($xxs) {
+                            left: 5%;
+                        }
+                    }
+                    
+                    .options {
+                        div {
+                            position: relative;
+                        }
+                        button {
+                            background: none;
+                            width: 1.8rem;
+                            height: 1.8rem;
+                            line-height: 0;
+                            border: 1px solid $white;
+                            border-radius: 50%;
+                            transition: 0.1s;
+                            color: $white !important;
+                            padding: 0 0 3px 0;
+                            z-index: 5;
+                            @include centerY;
+                            @include mQ($xs) {
+                                width: 1.5rem;
+                                height: 1.5rem;
+                                padding: 0 0 3px 0;
+                            }
+                            &.minus {
+                                left: 10%;
+                                @include mQ($xxs) {
+                                    left: 1%;
+                                }
+                            }
+                            &.plus {
+                                right: 10%;
+                                @include mQ($xxs) {
+                                    right: 1%;
+                                }
+                            }
+                            &.minus:hover, &.plus:hover {
+                                transform: translateY(-50%) scale(1.1);
+                            }
+                        }
+                        p {
+                            font-family: $textFont;
+                            font-size: 1rem;
+                            color: $white !important;
+                            margin-bottom: 10px;
+                            position: relative;
+                            @include mQ($xs) {
+                                margin-bottom: 8px;
+                            }
+                            span {
+                                color: $white !important;
+                            }
+                        }
+                    } //customizer end
+                }
+            }
+        }
+        
+    }
+    
+    //nav tabs start
+    .nav-tabs {
+        border: none;
+        float: none !important;
+        
+        li {
+            position: relative;
+            border-radius: 15px;
+            z-index: 1;
+            transition: 0.1s;
+            
+            &:hover {
+                transform: scale(1.03);
+            }
+            
+            &::before {
+                content: "";
+                height: 150%;
+                width: 100%;
+                left: 0;
+                border-radius: 30px;
+                @include centerY;
+                z-index: -1;
+                box-shadow: inset -2px -2px rgba(0,0,0, 0.2);
+            }
+            &:first-child::before {
+                background-color: $red;
+            } 
+            &:nth-child(2)::before {
+                background-color: $darkTeal;
+            }
+        }
+        a {
+            color: $white !important;
+            text-decoration: none;
+            font-family: $headerFont;
+            font-size: 1.2rem;
+            text-shadow: 2px 2px rgba(0,0,0, 0.2);
+        }
+    } //nav tabs end
+}

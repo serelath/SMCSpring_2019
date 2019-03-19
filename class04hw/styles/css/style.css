@@ -1,0 +1,220 @@
+* {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  color: #242526 !important; }
+
+html {
+  font-size: 14px; }
+  @media (max-width: 1200px) {
+    html {
+      font-size: 13px; } }
+
+body {
+  background-color: #242526;
+  overflow-x: hidden; }
+
+.container {
+  background-color: #E8EAE5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  @media (max-width: 768px) {
+    .container {
+      height: 100%; } }
+  .container header {
+    top: -75px;
+    background-color: #F9FFFD;
+    border: 10px solid #535657;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute; }
+    @media (max-width: 768px) {
+      .container header {
+        position: relative;
+        top: 0; } }
+    .container header h1 {
+      font-family: "Baloo Chettan", sans-serif;
+      font-size: 2.8rem;
+      position: relative;
+      left: -0.05rem; }
+      .container header h1 span {
+        position: relative;
+        left: 0.1rem;
+        z-index: 1;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.2); }
+        .container header h1 span::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          width: 115%;
+          height: 75%;
+          background-color: #C48184;
+          z-index: -1;
+          border-radius: 50px;
+          -webkit-box-shadow: inset 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 2px 2px rgba(0, 0, 0, 0.2); }
+  .container h2 {
+    font-family: "Roboto Slab", serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem; }
+  .container #content-area {
+    background-color: #242526;
+    height: 50vmin;
+    min-height: 250px; }
+    @media (max-width: 992px) {
+      .container #content-area {
+        height: calc(100vh - 225px); } }
+    .container #content-area #blob-container {
+      position: relative; }
+      @media (max-width: 992px) {
+        .container #content-area #blob-container {
+          height: calc(100vh - 225px); } }
+      .container #content-area #blob-container #blob {
+        max-width: 90%;
+        max-height: 90%;
+        background-color: #A8646F;
+        top: 40% !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 25vmin;
+        height: 25vmin;
+        border-radius: 50%; }
+        .container #content-area #blob-container #blob .eyes div {
+          width: 3vmin;
+          height: 3vmin;
+          border-radius: 50%;
+          background-color: #242526;
+          position: absolute;
+          top: 40%; }
+          .container #content-area #blob-container #blob .eyes div:first-child {
+            left: 24%; }
+          .container #content-area #blob-container #blob .eyes div:nth-child(2) {
+            right: 24%; }
+      .container #content-area #blob-container #customize {
+        background-color: #535657;
+        position: absolute;
+        bottom: -1px; }
+        .container #content-area #blob-container #customize .customizer {
+          border: 1px solid #F9FFFD;
+          position: relative;
+          float: left; }
+          @media (max-width: 479px) {
+            .container #content-area #blob-container #customize .customizer {
+              max-width: 50% !important; }
+              .container #content-area #blob-container #customize .customizer:nth-child(3) {
+                display: none; } }
+          .container #content-area #blob-container #customize .customizer h3 {
+            font-family: "Baloo Chettan", sans-serif;
+            color: #F9FFFD !important;
+            font-size: 1.2rem;
+            position: absolute;
+            top: -10px;
+            left: 10%;
+            background-color: #535657; }
+            @media (max-width: 479px) {
+              .container #content-area #blob-container #customize .customizer h3 {
+                left: 5%; } }
+          .container #content-area #blob-container #customize .customizer .options div {
+            position: relative; }
+          .container #content-area #blob-container #customize .customizer .options button {
+            background: none;
+            width: 1.8rem;
+            height: 1.8rem;
+            line-height: 0;
+            border: 1px solid #F9FFFD;
+            border-radius: 50%;
+            -webkit-transition: 0.1s;
+            -o-transition: 0.1s;
+            transition: 0.1s;
+            color: #F9FFFD !important;
+            padding: 0 0 3px 0;
+            z-index: 5;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            top: 50%;
+            position: absolute; }
+            @media (max-width: 768px) {
+              .container #content-area #blob-container #customize .customizer .options button {
+                width: 1.5rem;
+                height: 1.5rem;
+                padding: 0 0 3px 0; } }
+            .container #content-area #blob-container #customize .customizer .options button.minus {
+              left: 10%; }
+              @media (max-width: 479px) {
+                .container #content-area #blob-container #customize .customizer .options button.minus {
+                  left: 1%; } }
+            .container #content-area #blob-container #customize .customizer .options button.plus {
+              right: 10%; }
+              @media (max-width: 479px) {
+                .container #content-area #blob-container #customize .customizer .options button.plus {
+                  right: 1%; } }
+            .container #content-area #blob-container #customize .customizer .options button.minus:hover, .container #content-area #blob-container #customize .customizer .options button.plus:hover {
+              -webkit-transform: translateY(-50%) scale(1.1);
+              -ms-transform: translateY(-50%) scale(1.1);
+              transform: translateY(-50%) scale(1.1); }
+          .container #content-area #blob-container #customize .customizer .options p {
+            font-family: "Roboto Slab", serif;
+            font-size: 1rem;
+            color: #F9FFFD !important;
+            margin-bottom: 10px;
+            position: relative; }
+            @media (max-width: 768px) {
+              .container #content-area #blob-container #customize .customizer .options p {
+                margin-bottom: 8px; } }
+            .container #content-area #blob-container #customize .customizer .options p span {
+              color: #F9FFFD !important; }
+  .container .nav-tabs {
+    border: none;
+    float: none !important; }
+    .container .nav-tabs li {
+      position: relative;
+      border-radius: 15px;
+      z-index: 1;
+      -webkit-transition: 0.1s;
+      -o-transition: 0.1s;
+      transition: 0.1s; }
+      .container .nav-tabs li:hover {
+        -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        transform: scale(1.03); }
+      .container .nav-tabs li::before {
+        content: "";
+        height: 150%;
+        width: 100%;
+        left: 0;
+        border-radius: 30px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        top: 50%;
+        position: absolute;
+        z-index: -1;
+        -webkit-box-shadow: inset -2px -2px rgba(0, 0, 0, 0.2);
+        box-shadow: inset -2px -2px rgba(0, 0, 0, 0.2); }
+      .container .nav-tabs li:first-child::before {
+        background-color: #A8646F; }
+      .container .nav-tabs li:nth-child(2)::before {
+        background-color: #4F646F; }
+    .container .nav-tabs a {
+      color: #F9FFFD !important;
+      text-decoration: none;
+      font-family: "Baloo Chettan", sans-serif;
+      font-size: 1.2rem;
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.2); }
