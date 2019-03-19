@@ -116,13 +116,9 @@
         
         $(document).ready(function() {
             
-            $(window).resize(function(){
-                if (window.matchMedia("(min-width: 992px)").matches){	
-                    $('.nav-tabs li a').click(function() {
-                        alert("This menu is only currently available in mobile/small screens. Please reduce screen size and refresh.");
-                    }); 
-                }	
-            });
+            $('.nav-tabs li a').click(function() {
+                alert("Mobile/Small Screens only. Only function working: right 3 buttons; 'Move','Random','Reset'");
+            }); 
             
             //move
             $('#move').click(function() {
