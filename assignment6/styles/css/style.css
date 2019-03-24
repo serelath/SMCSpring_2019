@@ -1,0 +1,101 @@
+* {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  color: #141213 !important;
+  font-family: "Raleway", sans-serif; }
+
+html {
+  font-size: 16px;
+  background-color: #DD303C; }
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px; } }
+
+.navbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  color: #141213;
+  text-transform: uppercase; }
+  @media (max-width: 1200px) {
+    .navbar .navbar-nav {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
+  .navbar .navbar-brand {
+    font-family: "Fredoka One", sans-serif;
+    font-size: 1.75rem;
+    color: #DD303C !important;
+    line-height: 0.8;
+    border: 3px solid #DD303C;
+    padding: 0.7rem;
+    border-radius: 50px; }
+  .navbar .navbar-toggler {
+    padding: 0.5rem;
+    border: none;
+    color: #141213; }
+  .navbar ul.social li {
+    padding: 5px 0; }
+    .navbar ul.social li a {
+      margin: 0 !important; }
+      .navbar ul.social li a:hover {
+        background-color: transparent !important; }
+      .navbar ul.social li a:hover i {
+        color: #DD303C !important; }
+      .navbar ul.social li a:hover span {
+        opacity: 1; }
+      .navbar ul.social li a span {
+        opacity: 0; }
+  .navbar ul li {
+    padding: 5px; }
+    .navbar ul li.active a span {
+      color: #DD303C !important; }
+    .navbar ul li.active a i {
+      color: #DD303C !important; }
+    .navbar ul li a {
+      font-family: "Raleway", sans-serif;
+      letter-spacing: 0.25px;
+      position: relative;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      margin: 0 5px;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      padding: 5px; }
+      @media (max-width: 1200px) {
+        .navbar ul li a {
+          margin: 0 5px 0 0; } }
+      .navbar ul li a:hover i {
+        color: #DD303C !important; }
+      .navbar ul li a:hover span {
+        color: #DD303C !important; }
+      .navbar ul li a i {
+        font-size: 1.1rem;
+        color: #5B5A5A !important;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s; }
+      .navbar ul li a .nav-span {
+        display: absolute;
+        font-size: 0.7rem;
+        top: 2rem;
+        white-space: nowrap;
+        color: #5B5A5A !important;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        left: 50%;
+        position: absolute; }

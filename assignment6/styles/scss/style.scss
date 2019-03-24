@@ -1,0 +1,113 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+* {
+    @include boxSizing;
+    color: $black !important;
+    font-family: $textFont;
+}
+html {
+    font-size: 16px;
+    background-color: $red;
+    @include mQ($xs) {
+        font-size: 14px;        
+    }
+}
+
+// NAV BAR
+.navbar {
+    position: relative;
+    display: flex;
+    background-color: white;
+    color: $black;
+    text-transform: uppercase;
+    .navbar-nav {
+        @include mQ($md) {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    .navbar-brand {
+        font-family: $headerFont;
+        font-size: 1.75rem;
+        color: $red !important;
+        line-height: 0.8;
+        border: 3px solid $red;
+        padding: 0.7rem;
+        border-radius: 50px;
+    }
+    .navbar-toggler {
+        padding: 0.5rem;
+        border: none;
+        color: $black;
+    }
+    ul {
+        &.social {
+            li {
+                padding: 5px 0;
+                a {
+                    margin: 0 !important;
+                    &:hover {
+                        background-color: transparent!important;
+                    }
+                    &:hover i {
+                        color: $red !important;
+                    }
+                    &:hover span {
+                        opacity: 1;
+                    }
+                    span {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        li {
+            padding: 5px;
+            &.active {
+                a {
+                    span { color: $red !important;}
+                    i {
+                        color: $red !important;
+                    }
+                }
+            }
+            a {
+                font-family: $textFont;
+                letter-spacing: 0.25px; 
+                position: relative;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                margin: 0 5px;
+                transition: 0.3s;
+                padding: 5px;
+                @include mQ($md) {
+                    margin: 0 5px 0 0;
+                }
+                
+                &:hover i {
+                    color: $red !important;
+                }
+                &:hover span {
+                    color: $red !important;
+                }
+                
+                i {
+                    font-size: 1.1rem;
+                    color: $darkGrey !important;
+                    transition: 0.3s;
+                }
+                .nav-span {
+                    display: absolute;
+                    font-size: 0.7rem;
+                    top: 2rem;
+                    white-space: nowrap;
+                    color: $darkGrey !important;
+                    transition: 0.3s;
+                    @include centerX;
+                }
+            }
+        }
+    }
+}// navbar end
