@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--MY STYLESHEET-->
-    <link rel="stylesheet" href="styles/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../styles/css/style.css" type="text/css">
     
     <!--GOOGLE FONT-->
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Raleway" rel="stylesheet">
@@ -18,23 +18,23 @@
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light py-3 px-sm-5 px-3 position-fixed">
-      <a class="navbar-brand" href="#">RED SLY.ME</a>
+      <a class="navbar-brand" href="../index.html">RED SLY.ME</a>
       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav text-center my-md-1 mt-3">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html"><i class="fas fa-home"></i><span class="nav-span">Home</span><span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="store.html"><i class="fas fa-store-alt"></i><span class="nav-span">Store</span></a>
+          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="fas fa-home"></i><span class="nav-span">Home</span><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="about.html"><i class="fab fa-earlybirds"></i><span class="nav-span">About</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/store.html"><i class="fas fa-store-alt"></i><span class="nav-span">Store</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/about.html"><i class="fab fa-earlybirds"></i><span class="nav-span">About</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/team.html"><i class="fas fa-users"></i><span class="nav-span">Team</span></a>
+            <a class="nav-link" href="team.html"><i class="fas fa-users"></i><span class="nav-span">Team</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="modal" data-target="#modal"><i class="far fa-envelope"></i><span class="nav-span">SUBSCIBE</span></a>
@@ -55,72 +55,9 @@
             </li>
         </ul>
       </div>
-    </nav> 
-    <!-- NAV END --> 
+    </nav> <!-- NAV END --> 
     
 <main>
-    <!-- CAROUSEL -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-           <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-12 text-center mb-0">
-                        <img src="assets/images/slime1.jpg" alt="">
-                        <img id="heat-slime"src="assets/images/slime2.jpg" alt="">
-                    </div>
-                    <div class="col-lg-6 col-12 text-lg-left text-center mt-4">
-                        <h2 class="mb-lg-1 mb-0">HEAT COLOR</h2>
-                        <h1>SLIMES</h1>
-                        <p class="mb-lg-0 mb-sm-3 mb-0">Just poke it to change color!</p>
-                        <button class="mt-md-4 mt-3"><a href="pages/store.html">SHOP NOW</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5  col-md-10 col-12 mx-auto text-center mb-0 d-lg-none d-block">
-                        <img src="assets/images/slime3.png" alt="">
-                    </div>
-                    <div class="col-lg-7 col-12 text-lg-left text-center mt-5">
-                        <h2 class="mb-lg-1 mb-0"></h2>
-                        <h1>VARIETY</h1>
-                        <p class="mb-1">We have much more variety in our collection. <br class="d-lg-block d-none">The slimy madness never ends!</p>
-                        <button class="mt-md-4 mt-3"><a href="pages/store.html">SHOP NOW</a></button>
-                    </div>
-                    <div class="col-lg-5 col-12 text-center mb-0 d-lg-block d-none px-0">
-                        <img src="assets/images/slime3.png" alt="">
-                        <img src="assets/images/slime4.png" alt="" class="variety">
-                        <img src="assets/images/slime5.png" alt="" class="variety">
-                        <img src="assets/images/slime6.png" alt="" class="variety">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-      </div> 
-      <!-- CAROUSEL END -->
-
-      <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <i class="fas fa-long-arrow-alt-left"></i>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <i class="fas fa-long-arrow-alt-right"></i>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
     
     <!-- Modal -->
         <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -150,7 +87,7 @@
         </div> 
     <!-- Modal end -->
 </main>
-    
+   
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

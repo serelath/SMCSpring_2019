@@ -14,11 +14,31 @@ html {
     }
 }
 @keyframes heat {
-    0%{
+    0%, 100%{
         opacity: 0;
     }
-    100% {
+    49% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    99% {
+        opacity:  0.8;
+    }
+}
+@keyframes variety {
+    0%, 100% {
+        opacity: 0;
+    }
+    1% {
         opacity: 0.9;
+    }
+    25% {
+        opacity: 0.9;
+    }
+    26% {
+        opacity: 0;
     }
 }
 body {
@@ -37,6 +57,10 @@ body {
             font-size: 2.3rem;
         }
     }
+    h4 {
+            font-family: $headerFont;
+            text-transform: uppercase;
+        }
     p {
         font-size: 1.2rem;
         @include mQ($sm) {
@@ -46,7 +70,7 @@ body {
     button {
         background-color: white;
         border: 2px solid $darkGrey;
-        box-shadow: -5px 5px $darkGrey;
+        box-shadow: -5px 5px $darkGrey, -3px 3px $darkGrey, -1px 1px $darkGrey;
         border-radius: 50px;
         padding: 0.5rem 1.5rem;
         transition: 0.2s;
@@ -59,6 +83,13 @@ body {
             text-decoration: none !important;
             color: $red !important;
         }
+    }
+}
+main {
+    position: relative;
+    top: 90px;
+    @include mQ($sm) {
+        top: 78px;
     }
 }
 
@@ -153,6 +184,7 @@ body {
                 transition: 0.2s;
                 padding: 10px;
                 margin: 0 !important;
+                cursor: pointer;
                 @include mQ($md) {
                     margin: 0 5px 0 0;
                 }
@@ -183,13 +215,10 @@ body {
 //CAROUSEL
 .carousel {
     height: calc(100vh - 90px);
-    position: relative;
-    top: 90px;
     width: 100vw;
     overflow: hidden;
     @include mQ($sm) {
         height: calc(100vh - 78px);  
-        top: 78px;
     }
     .carousel-indicators {
         li {
@@ -233,8 +262,9 @@ body {
                 #heat-slime {
                     opacity: 0;
                     position: absolute;
-                    animation: heat 1s forwards;
+                    animation: heat 1.5s infinite;
                     @include centerX;
+                    top: 0;
                 }
             }
             &:nth-child(2) {
@@ -246,6 +276,18 @@ body {
                     width: 100%;
                     @include mQ($sm) {
                         width: 50%;
+                    }
+                    &.variety {
+                        opacity: 0;
+                        top: 0;
+                        animation: variety 3s infinite;
+                        @include centerX;
+                        &:nth-child(2) {
+                            animation-delay: 1s;
+                        }
+                        &:nth-child(3) {
+                            animation-delay: 2s;
+                        }
                     }
                 }
             }
@@ -261,5 +303,67 @@ body {
             color: $red !important;
             font-size: 1.5rem;
         }
+    }
+} //carousel end
+
+//MODAL 
+.modal {
+    .modal-content {
+        border-radius: 20px;
+    }
+    .modal-header {
+        position: relative;
+        padding: 30px;
+        i {
+            font-size: 1.5rem;
+            @include centerY;
+        }
+        button {
+            width: 2rem;
+            height: 2rem;
+            padding: 0 !important;
+            color: $darkGrey !important;
+            box-shadow: none;
+            border: 1px solid $darkGrey;
+            &:hover {
+                box-shadow: none;
+                transform: none;
+            }
+        }
+    }
+    .modal-body {
+        padding: 25px;
+        input[type="email"] {
+            font-family: $textFont;
+            font-size: 1.2rem;
+            padding: 0.5rem 1.5rem !important;
+            border-radius: 50px;
+            border: 2px solid $darkGrey;
+            color: $darkGrey;
+            box-shadow: -5px 5px $darkGrey;
+            position: relative;
+            z-index: 10;
+        }
+        input[type="submit"] {
+            font-family: $headerFont;
+            background-color: transparent;
+            border: none;
+            color: $red !important;
+            padding: 0;
+            &:active {
+                background-color: transparent;
+                color: $red;
+            }
+        }
+    }
+} // modal end
+
+// TEAM
+.media {
+    color: $darkGrey !important;
+    img {
+        border-radius: 50%;
+        padding: 0;
+        border: 10px solid $darkGrey;
     }
 }
