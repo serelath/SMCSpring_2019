@@ -8,10 +8,64 @@
 
 html {
   font-size: 16px;
-  background-color: #DD303C; }
-  @media (max-width: 768px) {
+  overflow-x: hidden; }
+  @media (max-width: 992px) {
     html {
-      font-size: 14px; } }
+      font-size: 15px; } }
+
+@-webkit-keyframes heat {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.9; } }
+
+@keyframes heat {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.9; } }
+
+body h1 {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 7.5rem;
+  line-height: 0.9; }
+  @media (max-width: 992px) {
+    body h1 {
+      font-size: 4.5rem; } }
+
+body h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.5rem; }
+  @media (max-width: 992px) {
+    body h2 {
+      font-size: 2.3rem; } }
+
+body p {
+  font-size: 1.2rem; }
+  @media (max-width: 992px) {
+    body p {
+      font-style: 1rem; } }
+
+body button {
+  background-color: white;
+  border: 2px solid #232021;
+  -webkit-box-shadow: -5px 5px #232021;
+  box-shadow: -5px 5px #232021;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+  body button:hover {
+    -webkit-box-shadow: 0px 0px #232021;
+    box-shadow: 0px 0px #232021;
+    -webkit-transform: translate(-4px, 4px);
+    -ms-transform: translate(-4px, 4px);
+    transform: translate(-4px, 4px); }
+  body button a {
+    font-family: "Fredoka One", sans-serif;
+    text-decoration: none !important;
+    color: #DD303C !important; }
 
 .navbar {
   position: relative;
@@ -19,8 +73,11 @@ html {
   display: -ms-flexbox;
   display: flex;
   background-color: white;
-  color: #141213;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 3px #232021;
+  box-shadow: 0px 3px #232021;
+  z-index: 10;
+  width: 100vw; }
   @media (max-width: 1200px) {
     .navbar .navbar-nav {
       -webkit-box-orient: horizontal;
@@ -37,65 +94,169 @@ html {
     line-height: 0.8;
     border: 3px solid #DD303C;
     padding: 0.7rem;
-    border-radius: 50px; }
+    border-radius: 50px;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+    .navbar .navbar-brand:hover {
+      background-color: #DD303C;
+      color: white !important; }
   .navbar .navbar-toggler {
     padding: 0.5rem;
-    border: none;
+    border: 2px solid #232021;
+    -webkit-box-shadow: -3px 3px #232021, -1px 1px #232021;
+    box-shadow: -3px 3px #232021, -1px 1px #232021;
     color: #141213; }
+    .navbar .navbar-toggler:hover {
+      -webkit-box-shadow: 0 0 #232021;
+      box-shadow: 0 0 #232021;
+      -webkit-transform: translate(-2px, 2px);
+      -ms-transform: translate(-2px, 2px);
+      transform: translate(-2px, 2px); }
   .navbar ul.social li {
     padding: 5px 0; }
     .navbar ul.social li a {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border: none;
       margin: 0 !important; }
       .navbar ul.social li a:hover {
-        background-color: transparent !important; }
+        background-color: transparent !important;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none; }
       .navbar ul.social li a:hover i {
         color: #DD303C !important; }
       .navbar ul.social li a:hover span {
         opacity: 1; }
       .navbar ul.social li a span {
-        opacity: 0; }
+        opacity: 0;
+        color: #DD303C !important; }
   .navbar ul li {
-    padding: 5px; }
-    .navbar ul li.active a span {
-      color: #DD303C !important; }
-    .navbar ul li.active a i {
-      color: #DD303C !important; }
+    padding: 10px; }
+    .navbar ul li.active a {
+      border: 2px solid #DD303C;
+      -webkit-box-shadow: -3px 3px #DD303C;
+      box-shadow: -3px 3px #DD303C; }
+      .navbar ul li.active a:hover {
+        -webkit-box-shadow: 0px 0px #DD303C;
+        box-shadow: 0px 0px #DD303C; }
+      .navbar ul li.active a span {
+        color: #DD303C !important; }
+      .navbar ul li.active a i {
+        color: #DD303C !important; }
     .navbar ul li a {
       font-family: "Raleway", sans-serif;
       letter-spacing: 0.25px;
       position: relative;
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 2.75rem;
+      height: 2.75rem;
+      border: 2px solid #232021;
       border-radius: 50%;
-      margin: 0 5px;
-      -webkit-transition: 0.3s;
-      -o-transition: 0.3s;
-      transition: 0.3s;
-      padding: 5px; }
+      -webkit-box-shadow: -3px 3px #232021;
+      box-shadow: -3px 3px #232021;
+      -webkit-transition: 0.2s;
+      -o-transition: 0.2s;
+      transition: 0.2s;
+      padding: 10px;
+      margin: 0 !important; }
       @media (max-width: 1200px) {
         .navbar ul li a {
           margin: 0 5px 0 0; } }
-      .navbar ul li a:hover i {
-        color: #DD303C !important; }
-      .navbar ul li a:hover span {
-        color: #DD303C !important; }
+      .navbar ul li a:hover {
+        -webkit-box-shadow: 0px 0px #232021;
+        box-shadow: 0px 0px #232021;
+        -webkit-transform: translate(-2px, 2px);
+        -ms-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px); }
       .navbar ul li a i {
-        font-size: 1.1rem;
-        color: #5B5A5A !important;
-        -webkit-transition: 0.3s;
-        -o-transition: 0.3s;
-        transition: 0.3s; }
+        font-size: 1.2rem;
+        color: #232021 !important;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s; }
       .navbar ul li a .nav-span {
         display: absolute;
         font-size: 0.7rem;
-        top: 2rem;
+        top: 3rem;
         white-space: nowrap;
-        color: #5B5A5A !important;
-        -webkit-transition: 0.3s;
-        -o-transition: 0.3s;
-        transition: 0.3s;
+        color: #232021 !important;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         transform: translateX(-50%);
         left: 50%;
         position: absolute; }
+
+.carousel {
+  height: calc(100vh - 90px);
+  position: relative;
+  top: 90px;
+  width: 100vw;
+  overflow: hidden; }
+  @media (max-width: 992px) {
+    .carousel {
+      height: calc(100vh - 78px);
+      top: 78px; } }
+  .carousel .carousel-indicators li {
+    border: 8px solid #DD303C;
+    height: 5px;
+    width: 5px;
+    margin: 10px;
+    border-radius: 50%; }
+    @media (max-width: 992px) {
+      .carousel .carousel-indicators li {
+        border: 6px solid #DD303C; } }
+  .carousel .carousel-inner {
+    height: 100%; }
+    .carousel .carousel-inner .carousel-item button {
+      margin-top: 50px !important;
+      font-size: 1.5rem; }
+      @media (max-width: 992px) {
+        .carousel .carousel-inner .carousel-item button {
+          font-size: 1rem;
+          margin-top: 10px !important; } }
+    .carousel .carousel-inner .carousel-item:first-child h2 {
+      margin-top: 13vmin; }
+      @media (max-width: 992px) {
+        .carousel .carousel-inner .carousel-item:first-child h2 {
+          margin-top: 0; } }
+    .carousel .carousel-inner .carousel-item:first-child h1, .carousel .carousel-inner .carousel-item:first-child h2, .carousel .carousel-inner .carousel-item:first-child button {
+      color: #DD303C !important; }
+    .carousel .carousel-inner .carousel-item:first-child img {
+      height: 70vmin; }
+      @media (max-width: 992px) {
+        .carousel .carousel-inner .carousel-item:first-child img {
+          height: 40vh; } }
+    .carousel .carousel-inner .carousel-item:first-child #heat-slime {
+      opacity: 0;
+      position: absolute;
+      -webkit-animation: heat 1s forwards;
+      animation: heat 1s forwards;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      left: 50%;
+      position: absolute; }
+    .carousel .carousel-inner .carousel-item:nth-child(2) {
+      margin-top: 13vmin; }
+      @media (max-width: 992px) {
+        .carousel .carousel-inner .carousel-item:nth-child(2) {
+          margin-top: 50px; } }
+      .carousel .carousel-inner .carousel-item:nth-child(2) img {
+        width: 100%; }
+        @media (max-width: 992px) {
+          .carousel .carousel-inner .carousel-item:nth-child(2) img {
+            width: 50%; } }
+  .carousel [class^="carousel-control"] {
+    opacity: 0;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+    .carousel [class^="carousel-control"]:hover {
+      opacity: 1; }
+    .carousel [class^="carousel-control"] i {
+      color: #DD303C !important;
+      font-size: 1.5rem; }
