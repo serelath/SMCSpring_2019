@@ -379,7 +379,9 @@ main {
   .media img {
     border-radius: 50%;
     padding: 0;
-    border: 10px solid #232021; }
+    border: 10px solid white;
+    -webkit-box-shadow: -5px 5px #DD303C;
+    box-shadow: -5px 5px #DD303C; }
   .media h4 {
     border-bottom: 3px solid #232021; }
 
