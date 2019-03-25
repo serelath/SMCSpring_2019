@@ -58,9 +58,17 @@ body {
         }
     }
     h4 {
-            font-family: $headerFont;
-            text-transform: uppercase;
+        font-family: $headerFont;
+        text-transform: uppercase;
+        color: $darkGrey !important;
         }
+    h3 {
+        font-family: $headerFont;
+        text-transform: uppercase;
+        font-size: 2.5rem !important;
+        white-space: nowrap;
+        color: $darkGrey !important;
+    }
     p {
         font-size: 1.2rem;
         @include mQ($sm) {
@@ -366,6 +374,9 @@ main {
         padding: 0;
         border: 10px solid $darkGrey;
     }
+    h4 {
+        border-bottom: 3px solid $darkGrey;
+    }
 }
 
 //JUMBOTRON
@@ -378,8 +389,17 @@ main {
             font-size: 4rem;
         }
     }
-    h4 {
-        font-size: 2.5rem !important;
-        white-space: nowrap;
+}
+
+//FEATURETTE
+hr {
+    border-bottom: 3px solid $darkGrey;
+}
+.featurette {
+    h1 {
+        font-size: 6rem !important; 
+        color: $red !important;
+        text-shadow: -5px 5px $darkGrey, -3px 3px $darkGrey;
     }
+    
 }

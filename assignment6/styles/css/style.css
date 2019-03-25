@@ -70,7 +70,15 @@ body h2 {
 
 body h4 {
   font-family: "Fredoka One", sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #232021 !important; }
+
+body h3 {
+  font-family: "Fredoka One", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5rem !important;
+  white-space: nowrap;
+  color: #232021 !important; }
 
 body p {
   font-size: 1.2rem; }
@@ -372,6 +380,8 @@ main {
     border-radius: 50%;
     padding: 0;
     border: 10px solid #232021; }
+  .media h4 {
+    border-bottom: 3px solid #232021; }
 
 .jumbotron {
   background-color: white;
@@ -381,6 +391,11 @@ main {
     @media (max-width: 992px) {
       .jumbotron h1 {
         font-size: 4rem; } }
-  .jumbotron h4 {
-    font-size: 2.5rem !important;
-    white-space: nowrap; }
+
+hr {
+  border-bottom: 3px solid #232021; }
+
+.featurette h1 {
+  font-size: 6rem !important;
+  color: #DD303C !important;
+  text-shadow: -5px 5px #232021, -3px 3px #232021; }
