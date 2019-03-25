@@ -305,7 +305,7 @@ main {
             -webkit-animation-delay: 2s;
             animation-delay: 2s; }
   .carousel [class^="carousel-control"] {
-    opacity: 0;
+    opacity: 0.2;
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s; }
@@ -372,3 +372,15 @@ main {
     border-radius: 50%;
     padding: 0;
     border: 10px solid #232021; }
+
+.jumbotron {
+  background-color: white;
+  border-bottom: 3px solid #232021; }
+  .jumbotron h1 {
+    color: #DD303C !important; }
+    @media (max-width: 992px) {
+      .jumbotron h1 {
+        font-size: 4rem; } }
+  .jumbotron h4 {
+    font-size: 2.5rem !important;
+    white-space: nowrap; }
