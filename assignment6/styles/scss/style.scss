@@ -386,6 +386,7 @@ main {
     border-bottom: 3px solid $darkGrey;
     h1 {
         color: $red !important;
+        text-shadow: -5px 5px $darkGrey, -3px 3px $darkGrey;
         @include mQ($sm) {
             font-size: 4rem;
         }
