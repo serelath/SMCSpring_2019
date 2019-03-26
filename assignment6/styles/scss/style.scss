@@ -252,13 +252,14 @@ main {
                     }
                 }
             &:first-child {
-                h2 {
-                    margin-top: 13vmin;
+                h3 {
+                    color: $darkGrey !important;
+                    margin-top: 13vmin !important;
                     @include mQ($sm) {
                         margin-top: 0;
                     }
                 }
-                h1, h2, button {
+                h1, button {
                     color: $red !important;
                 }
                 img {
