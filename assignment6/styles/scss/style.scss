@@ -254,7 +254,7 @@ main {
             &:first-child {
                 h3 {
                     color: $darkGrey !important;
-                    margin-top: 14vmin !important;
+                    margin-top: 16vmin !important;
                     @include mQ($sm) {
                         margin-top: 0px;
                     }
@@ -280,7 +280,7 @@ main {
                 }
             }
             &:nth-child(2) {
-                margin-top: 14vmin;
+                margin-top: 16vmin;
                 @include mQ($sm) {
                     margin-top: 50px;
                 }
