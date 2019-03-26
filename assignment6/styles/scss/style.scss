@@ -256,7 +256,7 @@ main {
                     color: $darkGrey !important;
                     margin-top: 13vmin !important;
                     @include mQ($sm) {
-                        margin-top: 0;
+                        margin-top: 0px;
                     }
                 }
                 h1 {
@@ -268,7 +268,7 @@ main {
                 img {
                     height: 70vmin;
                     @include mQ($sm) {
-                         height: 40vh;   
+                         height: 35vh;   
                     }
                 }
                 #heat-slime {
