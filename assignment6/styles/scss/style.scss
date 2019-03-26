@@ -259,6 +259,9 @@ main {
                         margin-top: 0;
                     }
                 }
+                h1 {
+                    text-shadow: -5px 5px $darkGrey, -3px 3px $darkGrey;
+                }
                 h1, button {
                     color: $red !important;
                 }
