@@ -105,7 +105,7 @@ body button {
   body button a {
     font-family: "Fredoka One", sans-serif;
     text-decoration: none !important;
-    color: #DD303C !important; }
+    color: #E23B46 !important; }
 
 main {
   position: relative;
@@ -137,16 +137,16 @@ main {
   .navbar .navbar-brand {
     font-family: "Fredoka One", sans-serif;
     font-size: 1.75rem;
-    color: #DD303C !important;
+    color: #E23B46 !important;
     line-height: 0.8;
-    border: 3px solid #DD303C;
+    border: 3px solid #E23B46;
     padding: 0.7rem;
     border-radius: 50px;
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s; }
     .navbar .navbar-brand:hover {
-      background-color: #DD303C;
+      background-color: #E23B46;
       color: white !important; }
   .navbar .navbar-toggler {
     padding: 0.5rem;
@@ -173,25 +173,25 @@ main {
         -ms-transform: none;
         transform: none; }
       .navbar ul.social li a:hover i {
-        color: #DD303C !important; }
+        color: #E23B46 !important; }
       .navbar ul.social li a:hover span {
         opacity: 1; }
       .navbar ul.social li a span {
         opacity: 0;
-        color: #DD303C !important; }
+        color: #E23B46 !important; }
   .navbar ul li {
     padding: 10px; }
     .navbar ul li.active a {
-      border: 2px solid #DD303C;
-      -webkit-box-shadow: -3px 3px #DD303C;
-      box-shadow: -3px 3px #DD303C; }
+      border: 2px solid #E23B46;
+      -webkit-box-shadow: -3px 3px #E23B46;
+      box-shadow: -3px 3px #E23B46; }
       .navbar ul li.active a:hover {
-        -webkit-box-shadow: 0px 0px #DD303C;
-        box-shadow: 0px 0px #DD303C; }
+        -webkit-box-shadow: 0px 0px #E23B46;
+        box-shadow: 0px 0px #E23B46; }
       .navbar ul li.active a span {
-        color: #DD303C !important; }
+        color: #E23B46 !important; }
       .navbar ul li.active a i {
-        color: #DD303C !important; }
+        color: #E23B46 !important; }
     .navbar ul li a {
       font-family: "Raleway", sans-serif;
       letter-spacing: 0.25px;
@@ -246,14 +246,14 @@ main {
     .carousel {
       height: calc(100vh - 78px); } }
   .carousel .carousel-indicators li {
-    border: 8px solid #DD303C;
+    border: 8px solid #E23B46;
     height: 5px;
     width: 5px;
     margin: 10px;
     border-radius: 50%; }
     @media (max-width: 992px) {
       .carousel .carousel-indicators li {
-        border: 6px solid #DD303C; } }
+        border: 6px solid #E23B46; } }
   .carousel .carousel-inner {
     height: 100%; }
     .carousel .carousel-inner .carousel-item button {
@@ -272,7 +272,7 @@ main {
     .carousel .carousel-inner .carousel-item:first-child h1 {
       text-shadow: -5px 5px #232021, -3px 3px #232021; }
     .carousel .carousel-inner .carousel-item:first-child h1, .carousel .carousel-inner .carousel-item:first-child button {
-      color: #DD303C !important; }
+      color: #E23B46 !important; }
     .carousel .carousel-inner .carousel-item:first-child img {
       height: 70vmin; }
       @media (max-width: 992px) {
@@ -295,7 +295,7 @@ main {
         .carousel .carousel-inner .carousel-item:nth-child(2) {
           margin-top: 50px; } }
       .carousel .carousel-inner .carousel-item:nth-child(2) h1 {
-        text-shadow: -5px 5px #DD303C, -3px 3px #DD303C; }
+        text-shadow: -5px 5px #E23B46, -3px 3px #E23B46; }
       .carousel .carousel-inner .carousel-item:nth-child(2) img {
         width: 100%; }
         @media (max-width: 992px) {
@@ -325,7 +325,7 @@ main {
     .carousel [class^="carousel-control"]:hover {
       opacity: 1; }
     .carousel [class^="carousel-control"] i {
-      color: #DD303C !important;
+      color: #E23B46 !important;
       font-size: 1.5rem; }
 
 .modal .modal-content {
@@ -373,11 +373,11 @@ main {
     font-family: "Fredoka One", sans-serif;
     background-color: transparent;
     border: none;
-    color: #DD303C !important;
+    color: #E23B46 !important;
     padding: 0; }
     .modal .modal-body input[type="submit"]:active {
       background-color: transparent;
-      color: #DD303C; }
+      color: #E23B46; }
 
 .media {
   color: #232021 !important; }
@@ -385,8 +385,8 @@ main {
     border-radius: 50%;
     padding: 0;
     border: 10px solid white;
-    -webkit-box-shadow: -5px 5px #DD303C;
-    box-shadow: -5px 5px #DD303C; }
+    -webkit-box-shadow: -5px 5px #E23B46;
+    box-shadow: -5px 5px #E23B46; }
   .media h4 {
     border-bottom: 3px solid #232021; }
 
@@ -394,7 +394,7 @@ main {
   background-color: white;
   border-bottom: 3px solid #232021; }
   .jumbotron h1 {
-    color: #DD303C !important;
+    color: #E23B46 !important;
     text-shadow: -5px 5px #232021, -3px 3px #232021; }
     @media (max-width: 992px) {
       .jumbotron h1 {
@@ -405,5 +405,5 @@ hr {
 
 .featurette h1 {
   font-size: 6rem !important;
-  color: #DD303C !important;
+  color: #E23B46 !important;
   text-shadow: -5px 5px #232021, -3px 3px #232021; }
