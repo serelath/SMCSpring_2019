@@ -284,6 +284,9 @@ main {
                 @include mQ($sm) {
                     margin-top: 50px;
                 }
+                h1 {
+                    text-shadow: -5px 5px $red, -3px 3px $red;
+                }
                 img {
                     width: 100%;
                     @include mQ($sm) {

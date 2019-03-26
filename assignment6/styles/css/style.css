@@ -294,6 +294,8 @@ main {
       @media (max-width: 992px) {
         .carousel .carousel-inner .carousel-item:nth-child(2) {
           margin-top: 50px; } }
+      .carousel .carousel-inner .carousel-item:nth-child(2) h1 {
+        text-shadow: -5px 5px #DD303C, -3px 3px #DD303C; }
       .carousel .carousel-inner .carousel-item:nth-child(2) img {
         width: 100%; }
         @media (max-width: 992px) {
