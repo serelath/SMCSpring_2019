@@ -97,8 +97,14 @@ body button {
   -o-transition: 0.2s;
   transition: 0.2s; }
   body button:hover {
-    -webkit-box-shadow: 0px 0px #232021;
-    box-shadow: 0px 0px #232021;
+    -webkit-box-shadow: -7px 7px #232021, -5px 5px #232021, -3px 3px #232021, -1px 1px #232021;
+    box-shadow: -7px 7px #232021, -5px 5px #232021, -3px 3px #232021, -1px 1px #232021;
+    -webkit-transform: translate(2px, -2px);
+    -ms-transform: translate(2px, -2px);
+    transform: translate(2px, -2px); }
+  body button:active {
+    -webkit-box-shadow: -1px 1px #232021;
+    box-shadow: -1px 1px #232021;
     -webkit-transform: translate(-4px, 4px);
     -ms-transform: translate(-4px, 4px);
     transform: translate(-4px, 4px); }
@@ -163,8 +169,8 @@ main {
   .navbar ul.social li {
     padding: 5px 0; }
     .navbar ul.social li a {
-      -webkit-box-shadow: none;
-      box-shadow: none;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
       border: none;
       margin: 0 !important; }
       .navbar ul.social li a:hover {
@@ -183,11 +189,17 @@ main {
     padding: 10px; }
     .navbar ul li.active a {
       border: 2px solid #DD303C;
-      -webkit-box-shadow: -3px 3px #DD303C;
-      box-shadow: -3px 3px #DD303C; }
+      -webkit-box-shadow: -3px 3px #DD303C, -1px 1px #DD303C;
+      box-shadow: -3px 3px #DD303C, -1px 1px #DD303C; }
       .navbar ul li.active a:hover {
-        -webkit-box-shadow: 0px 0px #DD303C;
-        box-shadow: 0px 0px #DD303C; }
+        -webkit-box-shadow: -5px 5px #DD303C, -3px 3px #DD303C, -1px 1px #DD303C;
+        box-shadow: -5px 5px #DD303C, -3px 3px #DD303C, -1px 1px #DD303C; }
+      .navbar ul li.active a:active {
+        -webkit-box-shadow: -1px 1px #DD303C;
+        box-shadow: -1px 1px #DD303C;
+        -webkit-transform: translate(-2px, 2px);
+        -ms-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px); }
       .navbar ul li.active a span {
         color: #DD303C !important; }
       .navbar ul li.active a i {
@@ -212,8 +224,14 @@ main {
         .navbar ul li a {
           margin: 0 5px 0 0; } }
       .navbar ul li a:hover {
-        -webkit-box-shadow: 0px 0px #232021;
-        box-shadow: 0px 0px #232021;
+        -webkit-box-shadow: -5px 5px #232021, -3px 3px #232021, -1px 1px #232021;
+        box-shadow: -5px 5px #232021, -3px 3px #232021, -1px 1px #232021;
+        -webkit-transform: translate(2px, -2px);
+        -ms-transform: translate(2px, -2px);
+        transform: translate(2px, -2px); }
+      .navbar ul li a:active {
+        -webkit-box-shadow: -1px 1px #232021;
+        box-shadow: -1px 1px #232021;
         -webkit-transform: translate(-2px, 2px);
         -ms-transform: translate(-2px, 2px);
         transform: translate(-2px, 2px); }
@@ -225,10 +243,11 @@ main {
         transition: 0.2s; }
       .navbar ul li a .nav-span {
         display: absolute;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         top: 3rem;
         white-space: nowrap;
         color: #232021 !important;
+        text-transform: lowercase;
         -webkit-transition: 0.2s;
         -o-transition: 0.2s;
         transition: 0.2s;
@@ -237,6 +256,9 @@ main {
         transform: translateX(-50%);
         left: 50%;
         position: absolute; }
+        @media (max-width: 992px) {
+          .navbar ul li a .nav-span {
+            font-size: 0.9rem; } }
 
 .carousel {
   height: calc(100vh - 90px);
@@ -348,6 +370,7 @@ main {
     color: #232021 !important;
     -webkit-box-shadow: none;
     box-shadow: none;
+    line-height: 0.5;
     border: 1px solid #232021; }
     .modal .modal-header button:hover {
       -webkit-box-shadow: none;

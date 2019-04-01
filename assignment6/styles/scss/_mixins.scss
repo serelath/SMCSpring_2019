@@ -28,3 +28,8 @@
 	-ms-box-sizing: border-box !important;
 	box-sizing: border-box !important;
 }
+
+//translate
+@mixin translate($xY) {
+    transform: translate(-($xY), ($xY));
+}
