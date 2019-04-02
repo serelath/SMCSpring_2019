@@ -303,7 +303,7 @@ main {
                 }
             }
             &:nth-child(2) {
-                margin-top: 22vmin !important;
+                margin-top: 15vmin !important;
                     @include mQ($lg) {
                         margin-top: 16vmin !important;
                     }
@@ -311,6 +311,14 @@ main {
                     margin-top: 50px;
                 }
                 h1 {
+                    margin-top: 7vmin !important;
+                    @include mQ($lg) {
+                        margin-top: 0vmin !important;
+                    }
+                    @include mQ($sm) {
+                        margin-top: 0px;
+                    }
+                    
                     text-shadow: -5px 5px $red, -3px 3px $red;
                 }
                 img {
