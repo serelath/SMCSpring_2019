@@ -423,6 +423,7 @@ main {
 
 //PRODUCT LISTING
 #products {
+    border-bottom: 2px solid $darkGrey;
     div {
         h4 {
             @include mQ($xs) {
