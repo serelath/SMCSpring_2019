@@ -417,7 +417,7 @@ main {
     }
 }
 
-//PRODUCTS
+//PRODUCT LISTING
 #products {
     div {
         h4 {
@@ -522,7 +522,41 @@ main {
             }
         }
     }
+}//product list end
+
+//PRODUCT TABLE
+
+th {
+    border-bottom: 2px solid $darkGrey !important;
+    border-top: 1px solid $darkGrey !important;
 }
+td {
+    border-top: 1px solid $darkGrey !important;
+    border-bottom: 1px solid $darkGrey !important;
+}
+tr {
+    transition: 0.3s;
+}
+tbody tr:hover {
+    background-color: $red !important;
+}
+table ~ h4 > span {
+    font-family: $headerFont !important;
+    color: $red !important; 
+}
+table ~ h4 {
+    position: absolute !important;
+    bottom: 0;
+    right: 0;
+    @include mQ($sm) {
+        position: relative !important;
+        bottom: none;
+        
+    }
+}
+
+
+//product table end
 
 //FEATURETTE
 hr {

@@ -490,6 +490,35 @@ main {
   #products div figure.eight div {
     background-color: #bacbda; }
 
+th {
+  border-bottom: 2px solid #232021 !important;
+  border-top: 1px solid #232021 !important; }
+
+td {
+  border-top: 1px solid #232021 !important;
+  border-bottom: 1px solid #232021 !important; }
+
+tr {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+
+tbody tr:hover {
+  background-color: #E23B46 !important; }
+
+table ~ h4 > span {
+  font-family: "Fredoka One", sans-serif !important;
+  color: #E23B46 !important; }
+
+table ~ h4 {
+  position: absolute !important;
+  bottom: 0;
+  right: 0; }
+  @media (max-width: 992px) {
+    table ~ h4 {
+      position: relative !important;
+      bottom: none; } }
+
 hr {
   border-bottom: 3px solid #232021; }
 
