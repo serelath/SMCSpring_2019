@@ -177,6 +177,9 @@ main {
       box-shadow: none !important;
       border: none;
       margin: 0 !important; }
+      @media (max-width: 992px) {
+        .navbar ul.social li a {
+          margin: 0 10px !important; } }
       .navbar ul.social li a:hover {
         background-color: transparent !important;
         -webkit-transform: none;
@@ -186,9 +189,17 @@ main {
         color: #E23B46 !important; }
       .navbar ul.social li a:hover span {
         opacity: 1; }
+        @media (max-width: 992px) {
+          .navbar ul.social li a:hover span {
+            color: #E23B46 !important; } }
       .navbar ul.social li a span {
+        top: 2.25rem !important;
         opacity: 0;
         color: #E23B46 !important; }
+        @media (max-width: 992px) {
+          .navbar ul.social li a span {
+            opacity: 1;
+            color: #232021 !important; } }
   .navbar ul li {
     padding: 10px; }
     .navbar ul li.active a {
@@ -227,6 +238,15 @@ main {
       @media (max-width: 1200px) {
         .navbar ul li a {
           margin: 0 5px 0 0; } }
+      @media (max-width: 992px) {
+        .navbar ul li a {
+          width: 3rem;
+          height: 3rem; } }
+      @media (max-width: 479px) {
+        .navbar ul li a {
+          width: 2.8rem;
+          height: 2.8rem;
+          margin: 0 -2px !important; } }
       .navbar ul li a:hover {
         -webkit-box-shadow: -5px 5px #232021, -3px 3px #232021, -1px 1px #232021;
         box-shadow: -5px 5px #232021, -3px 3px #232021, -1px 1px #232021;
@@ -245,6 +265,12 @@ main {
         -webkit-transition: 0.2s;
         -o-transition: 0.2s;
         transition: 0.2s; }
+        @media (max-width: 992px) {
+          .navbar ul li a i {
+            font-size: 1.5rem; } }
+        @media (max-width: xxs) {
+          .navbar ul li a i {
+            font-size: 1.2rem; } }
       .navbar ul li a .nav-span {
         display: absolute;
         font-size: 0.8rem;
@@ -262,7 +288,12 @@ main {
         position: absolute; }
         @media (max-width: 992px) {
           .navbar ul li a .nav-span {
-            font-size: 0.9rem; } }
+            font-size: 0.95rem;
+            top: 3.5rem; } }
+        @media (max-width: 479px) {
+          .navbar ul li a .nav-span {
+            font-size: 0.9rem;
+            top: 3.2rem; } }
 
 .carousel {
   height: calc(100vh - 90px);

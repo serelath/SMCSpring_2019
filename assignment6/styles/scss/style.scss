@@ -156,6 +156,9 @@ main {
                     box-shadow: none !important;
                     border: none;
                     margin: 0 !important;
+                    @include mQ($sm) {
+                        margin: 0 10px !important;
+                    }
                     &:hover {
                         background-color: transparent!important;
                         transform: none;
@@ -165,10 +168,18 @@ main {
                     }
                     &:hover span {
                         opacity: 1;
+                        @include mQ($sm) {
+                            color: $red !important;
+                        }
                     }
                     span {
+                        top: 2.25rem !important;
                         opacity: 0;
                         color: $red !important;
+                        @include mQ($sm) {
+                            opacity: 1;
+                            color: $darkGrey !important;
+                        }
                     }
                 }
             }
@@ -208,6 +219,15 @@ main {
                 @include mQ($md) {
                     margin: 0 5px 0 0;
                 }
+                @include mQ($sm) {
+                    width: 3rem;
+                    height: 3rem;
+                }
+                @include mQ($xxs) {
+                    width: 2.8rem;
+                    height: 2.8rem;
+                    margin: 0 -2px !important;
+                }
                 &:hover {
                     box-shadow: -5px 5px $darkGrey, -3px 3px $darkGrey, -1px 1px $darkGrey;
                     @include translate(-2px);
@@ -221,6 +241,12 @@ main {
                     font-size: 1.2rem;
                     color: $darkGrey !important;
                     transition: 0.2s;
+                    @include mQ($sm) {
+                        font-size: 1.5rem;
+                    }
+                    @include mQ(xxs) {
+                        font-size: 1.2rem;
+                    }
                 }
                 .nav-span {
                     display: absolute;
@@ -232,7 +258,12 @@ main {
                     transition: 0.2s;
                     @include centerX;
                     @include mQ($sm) {
+                        font-size: 0.95rem;
+                        top: 3.5rem;
+                    }
+                    @include mQ($xxs) {
                         font-size: 0.9rem;
+                        top: 3.2rem;
                     }
                 }
             }
