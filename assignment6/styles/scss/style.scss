@@ -173,7 +173,7 @@ main {
             padding: 10px;
             &.active {
                 a {
-                    border: 2px solid $red;
+                    border: 2px solid $red !important;
                     box-shadow: -3px 3px $red, -1px 1px $red;
                     &:hover {
                         box-shadow: -5px 5px $red, -3px 3px $red, -1px 1px $red;
