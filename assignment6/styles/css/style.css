@@ -319,7 +319,7 @@ main {
       position: absolute;
       top: 0; }
     .carousel .carousel-inner .carousel-item:nth-child(2) {
-      margin-top: 15vmin !important; }
+      margin-top: 17vmin !important; }
       @media (max-width: 1600px) {
         .carousel .carousel-inner .carousel-item:nth-child(2) {
           margin-top: 16vmin !important; } }
@@ -327,7 +327,7 @@ main {
         .carousel .carousel-inner .carousel-item:nth-child(2) {
           margin-top: 50px; } }
       .carousel .carousel-inner .carousel-item:nth-child(2) h1 {
-        margin-top: 7vmin !important;
+        margin-top: 5vmin !important;
         text-shadow: -5px 5px #E23B46, -3px 3px #E23B46; }
         @media (max-width: 1600px) {
           .carousel .carousel-inner .carousel-item:nth-child(2) h1 {
