@@ -429,7 +429,7 @@ main {
             background-size: 85%;
             background-repeat: no-repeat;
             background-position: center;
-            transition: 0.3s;
+            transition: 0.2s;
             cursor: pointer;
             position: relative;
             background-image: url(../../assets/images/slime-product-1.jpg);
@@ -535,7 +535,7 @@ td {
     border-bottom: 1px solid $darkGrey !important;
 }
 tr {
-    transition: 0.3s;
+    transition: 0.2s;
 }
 tbody tr:hover {
     background-color: $red !important;
