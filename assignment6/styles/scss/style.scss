@@ -417,6 +417,113 @@ main {
     }
 }
 
+//PRODUCTS
+#products {
+    div {
+        h4 {
+            @include mQ($xs) {
+                font-size: 1.3rem;
+            }
+        }
+        figure {
+            background-size: 85%;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: 0.3s;
+            cursor: pointer;
+            position: relative;
+            background-image: url(../../assets/images/slime-product-1.jpg);
+            div {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                border: 3px solid white;
+                box-shadow: -2px 2px $darkGrey;
+                @include mQ($xxs) {
+                    width: 25px;
+                    height: 25px;
+                    bottom: 10px;
+                    right: 10px;
+                }
+
+            }
+            &::before {
+                content: "";
+                display: block;
+                padding-top: 100%;
+            }
+            
+            &.one {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-2.jpg);
+                }
+                div {
+                    background-color: #d95367;
+                }
+            }
+            &.two {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-3.jpg);
+                }
+                div {
+                    background-color: #da93a5;
+                }
+            }
+            &.three {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-4.jpg);
+                }
+                div {
+                    background-color: #cfa39c;
+                }
+            }
+            &.four {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-5.jpg);
+                }
+                div {
+                    background-color: #bbd6d1;
+                }
+            }
+            &.five {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-6.jpg);
+                }
+                div {
+                    background-color: #66bfcd;
+                }
+            }
+            &.six {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-7.jpg);
+                }
+                div {
+                    background-color: #7a4530;
+                }
+            }
+            &.seven {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-8.jpg);
+                }
+                div {
+                    background-color: #9e75c2;
+                }
+            }
+            &.eight {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-9.jpg);
+                }
+                div {
+                    background-color: #bacbda;
+                }
+            }
+        }
+    }
+}
+
 //FEATURETTE
 hr {
     border-bottom: 3px solid $darkGrey;

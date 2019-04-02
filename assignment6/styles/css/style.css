@@ -423,6 +423,73 @@ main {
       .jumbotron h1 {
         font-size: 4rem; } }
 
+@media (max-width: 768px) {
+  #products div h4 {
+    font-size: 1.3rem; } }
+
+#products div figure {
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  position: relative;
+  background-image: url(../../assets/images/slime-product-1.jpg); }
+  #products div figure div {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    border: 3px solid white;
+    -webkit-box-shadow: -2px 2px #232021;
+    box-shadow: -2px 2px #232021; }
+    @media (max-width: 479px) {
+      #products div figure div {
+        width: 25px;
+        height: 25px;
+        bottom: 10px;
+        right: 10px; } }
+  #products div figure::before {
+    content: "";
+    display: block;
+    padding-top: 100%; }
+  #products div figure.one:hover {
+    background-image: url(../../assets/images/slime-product-2.jpg); }
+  #products div figure.one div {
+    background-color: #d95367; }
+  #products div figure.two:hover {
+    background-image: url(../../assets/images/slime-product-3.jpg); }
+  #products div figure.two div {
+    background-color: #da93a5; }
+  #products div figure.three:hover {
+    background-image: url(../../assets/images/slime-product-4.jpg); }
+  #products div figure.three div {
+    background-color: #cfa39c; }
+  #products div figure.four:hover {
+    background-image: url(../../assets/images/slime-product-5.jpg); }
+  #products div figure.four div {
+    background-color: #bbd6d1; }
+  #products div figure.five:hover {
+    background-image: url(../../assets/images/slime-product-6.jpg); }
+  #products div figure.five div {
+    background-color: #66bfcd; }
+  #products div figure.six:hover {
+    background-image: url(../../assets/images/slime-product-7.jpg); }
+  #products div figure.six div {
+    background-color: #7a4530; }
+  #products div figure.seven:hover {
+    background-image: url(../../assets/images/slime-product-8.jpg); }
+  #products div figure.seven div {
+    background-color: #9e75c2; }
+  #products div figure.eight:hover {
+    background-image: url(../../assets/images/slime-product-9.jpg); }
+  #products div figure.eight div {
+    background-color: #bacbda; }
+
 hr {
   border-bottom: 3px solid #232021; }
 
