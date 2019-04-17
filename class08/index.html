@@ -116,6 +116,8 @@
                 var offeredPrice = $(this).val();
                $('#priceValue').html("$" + offeredPrice);
                 
+                $(this).siblings("div").remove();
+                
                 if(offeredPrice < 45000) {
                     $('#priceValue').after('<div class="invalid-feedback text-center">Don\'t lowball us!!!</div>')
                 } else {
