@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>FLOWER</title>
+    
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="">What is your spirit flower?</h1>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                
+                <form action="form-process.php" method="post">
+                  
+                   <h3>Choose a season:</h3>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="" id="spring" name="spring">
+                        <label for="spring">Spring</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="" id="spring" name="spring">
+                        <label for="spring">Summer</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="" id="spring" name="spring">
+                        <label for="spring">Fall</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="" id="spring" name="spring">
+                        <label for="spring">Winter</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="color"></label>
+                        <select class="form-control" name="color" id="colorSelect">
+                            <option>Select your favorite color.</option>
+                        </select>
+                    </div>
+                    
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script>
+    
+        $(document).ready(function() {
+            var springFlower = {
+                Yellow:["Winter Aconite", "winter-aconite"], 
+                Blue:["Bluebell", "bluebell"],
+                White:["Lily of the Valley", 'Lily-of-the-Valley'],
+                Magenta:["Hyacinth", 'hyacinth'],
+                'Yellow-Orange':["Daffodil", "daffodil"],
+                Purple:["Crocus", "crocus"]
+            };
+            var summerFlower = {
+                Red:["Amaranthus", "amaranthus"],
+                Blue:["Lily of the Nile", "Lily-of-the-Nile"],
+                Gold:["Marigold", "marigold"],
+                Pink:["Astilbe", "astilbe"],
+                'Yellow-Orange':["Sulfur Cosmos", "Sulfur-Cosmos"],
+                White:["Daisy", "daisies"],
+                Yellow:["Sunflower", "sunflower"]
+            };
+            var fallFlower = [];
+            var winterFlower = [];
+            
+            $('input[type="radio"]').change(function(){
+                var currentSelect = $(this).siblings('label').text().toLowerCase(); 
+                var nameString = eval(currentSelect + 'Flower');
+                
+                $(this).parent().siblings('.form-group').find('div').remove();
+                $('#colorSelect').find('option').remove();
+                
+                var optionNames = "";
+                for (var key in nameString) {
+                    optionNames += "<option value=" + key + ">" + key + "</option>";
+                }
+                
+                $('#colorSelect').html("<option>Select your favorite color.</option>" + optionNames)
+
+            }); //radio change end
+            $('select').change(function(){
+                var currentSelect = $('input[type="radio"]:checked').siblings('label').text().toLowerCase(); 
+                var nameString = eval(currentSelect + 'Flower');
+                var currentOption = $(this).val();
+                
+                $(this).siblings('div').remove();
+                $(this).after("<div class='row'><div class='alert alert-light col-12' role='alert'><h3>Your spirit flower is the " + nameString[currentOption][0] + "!</h3><img class='w-100' src='images/" + nameString[currentOption][1] + ".jpg'></div></div>");
+            })
+        });// end of document ready
+    
+    </script>
+  </body>
+</html>
