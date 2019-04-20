@@ -15,12 +15,12 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 class="">What is your spirit flower?</h1>
+                <h1 class="text-center mt-3 mt-sm-5">What is your <br class="d-block d-sm-none">spirit flower?</h1>
             </div>
         </div>
         
         <div class="row">
-            <div class="col">
+            <div class="col-11 col-sm-10 text-center mx-auto mt-3 mt-md-4">
                 
                 <form action="form-process.php" method="post">
                   
@@ -45,7 +45,7 @@
                     <div class="form-group">
                         <label for="color"></label>
                         <select class="form-control" name="color" id="colorSelect">
-                            <option>Select your favorite color.</option>
+                            <option>Choose a color you like.</option>
                         </select>
                     </div>
                     
@@ -69,7 +69,7 @@
                 Blue:["Bluebell", "bluebell"],
                 White:["Lily of the Valley", 'Lily-of-the-Valley'],
                 Magenta:["Hyacinth", 'hyacinth'],
-                'Yellow-Orange':["Daffodil", "daffodil"],
+                'Yellow-orange':["Daffodil", "daffodil"],
                 Purple:["Crocus", "crocus"]
             };
             var summerFlower = {
@@ -77,12 +77,26 @@
                 Blue:["Lily of the Nile", "Lily-of-the-Nile"],
                 Gold:["Marigold", "marigold"],
                 Pink:["Astilbe", "astilbe"],
-                'Yellow-Orange':["Sulfur Cosmos", "Sulfur-Cosmos"],
+                'Yellow-orange':["Sulfur Cosmos", "Sulfur-Cosmos"],
                 White:["Daisy", "daisies"],
                 Yellow:["Sunflower", "sunflower"]
             };
-            var fallFlower = [];
-            var winterFlower = [];
+            var fallFlower = {
+                Purple:["Beautyberry", "Beautyberry"],
+                White:["Iberis Autumn Beauty", "Iberis-Autumn-Beauty"],
+                Yellow:["Heliopsis", "Heliopsis"],
+                Red:["Sumac", "Sumac"],
+                Magenta:["Dianthus", "Dianthus"],
+                'Faded-red':["Purple Fountain Grass", "Purple-Fountain-Grass"],
+            };
+            var winterFlower = {
+                Yellow:["English Primrose", "English-Primrose"],
+                Purple:["Pansy", "Pansy"],
+                'Dark-Blue':["Honeywort", "Honeywort"],
+                Red:["Kaffir Lily", "Kaffir-Lily"],
+                Pink:["Camellia", "Camellia"],
+                White:["Winter Honeysuckle", "Winter-Honeysuckle"],
+            };
             
             $('input[type="radio"]').change(function(){
                 var currentSelect = $(this).siblings('label').text().toLowerCase(); 
@@ -96,7 +110,7 @@
                     optionNames += "<option value=" + key + ">" + key + "</option>";
                 }
                 
-                $('#colorSelect').html("<option>Select your favorite color.</option>" + optionNames)
+                $('#colorSelect').html("<option>Choose a color you like.</option>" + optionNames)
 
             }); //radio change end
             $('select').change(function(){
@@ -105,7 +119,7 @@
                 var currentOption = $(this).val();
                 
                 $(this).siblings('div').remove();
-                $(this).after("<div class='row'><div class='alert alert-light col-12' role='alert'><h3>Your spirit flower is the " + nameString[currentOption][0] + "!</h3><img class='w-100' src='images/" + nameString[currentOption][1] + ".jpg'></div></div>");
+                $(this).after("<div class='row'><div class='alert alert-light col-12 mx-auto' role='alert'><h4>Your spirit flower is the " + nameString[currentOption][0] + "!</h4><img class='w-100' src='images/" + nameString[currentOption][1] + ".jpg'></div></div>");
             })
         });// end of document ready
     
