@@ -128,7 +128,7 @@
                 var currentOption = $(this).val();
                 
                 $(this).siblings('div').remove();
-                $(this).after("<div class='row mt-1'><div class='alert alert-light col-12 mx-auto' role='alert'><h4>Your spirit flower is the " + nameString[currentOption][0] + "!</h4><img class='w-100' src='images/" + nameString[currentOption][1] + ".jpg'></div></div>");
+                $(this).after("<div class='row mt-1'><div class='alert alert-light col-12 mx-auto' role='alert'><h4>Your spirit flower is the <span class='text-dark'>" + nameString[currentOption][0] + "</span>!</h4><img class='w-100' src='images/" + nameString[currentOption][1] + ".jpg'></div></div>");
             })
         });// end of document ready
     
