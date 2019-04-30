@@ -2,6 +2,11 @@ body {
     overflow: hidden;
     background-color: black;
 }
+.container {
+    position: relative;
+    top: 50vh;
+    animation: scale 3s infinite;
+}
 .text, .square {
     position: absolute;
     top: 50%;
@@ -97,5 +102,16 @@ circle {
     to {
         stroke-dasharray: 70;
         stroke-dashoffset: 300;
+    }
+}
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    25%,50% {
+        transform: scale(1.2);
+    }
+    75% {
+        transform: scale(1);
     }
 }
