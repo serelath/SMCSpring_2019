@@ -5,6 +5,7 @@ body {
 .container {
     position: relative;
     top: 50vh;
+    transform: scale(4);
     animation: scale 3s infinite;
 }
 .text, .square {
@@ -106,12 +107,12 @@ circle {
 }
 @keyframes scale {
     0% {
-        transform: scale(1);
+        transform: scale(4);
     }
     25%,50% {
-        transform: scale(1.2);
+        transform: scale(4.2);
     }
     75% {
-        transform: scale(1);
+        transform: scale(4);
     }
 }
