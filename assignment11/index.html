@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 11</title>
+    
+    <style>
+        body {
+            background-color: black;
+        }
+        canvas {
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            margin: auto;
+        }
+        #labels {
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            transform: translateX(-50%);
+        }
+        label {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: white;
+            margin: 25px;
+        }
+    </style>
+    
+</head>
+<body>
+  
+    <div id="labels">
+        <label for="times">Times Clicked: <span id="timesClicked">0</span></label>
+        
+        <label for="color">Color</label>
+        <input type="color" name="color" value="#7558BD">
+        
+        <label for="size">Size</label>
+        <input type="range" name="size" min="25" max="100" value="50">
+    </div>
+   
+   <canvas id="Game" width="900px" height="550px">
+       
+   </canvas>
+   
+    <script src="canvas.js"></script>
+</body>
+</html>
