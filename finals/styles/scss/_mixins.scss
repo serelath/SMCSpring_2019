@@ -1,0 +1,35 @@
+//positioning
+@mixin centerer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin centerX {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+}
+@mixin centerY {
+    transform: translateY(-50%);
+    top: 50%;
+    position: absolute;
+}
+
+//media query
+@mixin mQ($px) {
+    @media (max-width:$px) { @content; }
+}
+
+// box sizing
+@mixin boxSizing {
+    -webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+}
+
+//translate
+@mixin translate($xY) {
+    transform: translate(-($xY), ($xY));
+}

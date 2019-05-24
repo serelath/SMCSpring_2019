@@ -1,0 +1,638 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+* {
+    @include boxSizing;
+    color: $black !important;
+    font-family: $textFont;
+}
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+    @include mQ($sm) {
+        font-size: 15px;        
+    }
+}
+@keyframes heat {
+    0%, 100%{
+        opacity: 0;
+    }
+    49% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    99% {
+        opacity:  0.8;
+    }
+}
+@keyframes variety {
+    0%, 100% {
+        opacity: 0;
+    }
+    1% {
+        opacity: 0.9;
+    }
+    25% {
+        opacity: 0.9;
+    }
+    26% {
+        opacity: 0;
+    }
+}
+
+//scrollbar
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: white;
+}
+
+body::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: $red;
+}
+//scrollbar end
+
+body {
+    h1 {
+        font-family: $headerFont;
+        font-size: 7.5rem;
+        line-height: 0.9;
+        @include mQ($sm) {
+            font-size: 4.5rem;
+        }
+    }
+    h2 {
+        font-family: $textFont;
+        font-size: 3.5rem;
+        @include mQ($sm) {
+            font-size: 2.3rem;
+        }
+    }
+    h4 {
+        font-family: $headerFont;
+        text-transform: uppercase;
+        color: $darkGrey !important;
+        }
+    h3 {
+        font-family: $headerFont;
+        text-transform: uppercase;
+        font-size: 2.5rem !important;
+        white-space: nowrap;
+        color: $darkGrey !important;
+    }
+    p {
+        font-size: 1.2rem;
+        @include mQ($sm) {
+            font-style: 1rem;
+        }
+    }
+    .red {
+        font-family: $headerFont !important;
+        color: $red !important; 
+    }
+    button {
+        background-color: white;
+        border: 2px solid $darkGrey;
+        box-shadow: -5px 5px $darkGrey, -3px 3px $darkGrey, -1px 1px $darkGrey;
+        border-radius: 50px;
+        padding: 0.5rem 1.5rem;
+        transition: 0.2s;
+        &:hover {
+            box-shadow: -7px 7px $darkGrey, -5px 5px $darkGrey, -3px 3px $darkGrey, -1px 1px $darkGrey;
+            @include translate(-2px);
+        }
+        &:active {
+            box-shadow: -1px 1px $darkGrey;
+            @include translate(4px);
+        }
+        a {
+            font-family: $headerFont;
+            text-decoration: none !important;
+            color: $red !important;
+        }
+    }
+}
+main {
+    position: relative;
+    top: 90px;
+    @include mQ($sm) {
+        top: 78px;
+    }
+}
+
+// NAV BAR
+.navbar {
+    position: relative;
+    display: flex;
+    background-color: white;
+    text-transform: uppercase;
+    box-shadow: 0px 3px $darkGrey;
+    z-index: 10;
+    width: 100vw;
+    .navbar-nav {
+        @include mQ($md) {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    .navbar-brand {
+        font-family: $headerFont;
+        font-size: 1.75rem;
+        color: $red !important;
+        line-height: 0.8;
+        border: 3px solid $red;
+        padding: 0.7rem 1rem;
+        border-radius: 50px;
+        transition: 0.2s;
+        &:hover {
+            background-color: $red;
+            color: white !important;
+        }
+    }
+    .navbar-toggler {
+        padding: 0.5rem;
+        border: 2px solid $darkGrey;
+        box-shadow: -3px 3px $darkGrey, -1px 1px $darkGrey;
+        color: $black;
+        &:hover {
+            box-shadow: 0 0 $darkGrey;
+            transform: translate(-2px, 2px)
+        }
+    }
+    ul {
+        &.social {
+            li {
+                padding: 5px 0;
+                a {
+                    box-shadow: none !important;
+                    border: none;
+                    margin: 0 !important;
+                    @include mQ($sm) {
+                        margin: 0 10px !important;
+                    }
+                    &:hover {
+                        background-color: transparent!important;
+                        transform: none;
+                    }
+                    &:hover i {
+                        color: $red !important;
+                    }
+                    &:hover span {
+                        opacity: 1;
+                        @include mQ($sm) {
+                            color: $red !important;
+                        }
+                    }
+                    span {
+                        top: 2.25rem !important;
+                        opacity: 0;
+                        color: $red !important;
+                        @include mQ($sm) {
+                            opacity: 1;
+                            color: $darkGrey !important;
+                        }
+                    }
+                }
+            }
+        }
+        li {
+            padding: 10px;
+            &.active {
+                a {
+                    border: 2px solid $red !important;
+                    box-shadow: -3px 3px $red, -1px 1px $red;
+                    &:hover {
+                        box-shadow: -5px 5px $red, -3px 3px $red, -1px 1px $red;
+                    }
+                    &:active {
+                        box-shadow: -1px 1px $red;
+                        @include translate(2px);
+                    }
+                    span { color: $red !important;}
+                    i {
+                        color: $red !important;
+                    }
+                }
+            }
+            a {
+                font-family: $textFont;
+                letter-spacing: 0.25px; 
+                position: relative;
+                width: 2.75rem;
+                height: 2.75rem;
+                border: 2px solid $darkGrey;
+                border-radius: 50%;
+                box-shadow: -3px 3px $darkGrey;
+                transition: 0.2s;
+                padding: 10px;
+                margin: 0 !important;
+                cursor: pointer;
+                @include mQ($md) {
+                    margin: 0 5px 0 0;
+                }
+                @include mQ($sm) {
+                    width: 3rem;
+                    height: 3rem;
+                }
+                @include mQ($xxs) {
+                    width: 3rem;
+                    height: 3rem;
+                    margin: 0 -2px !important;
+                }
+                &:hover {
+                    box-shadow: -5px 5px $darkGrey, -3px 3px $darkGrey, -1px 1px $darkGrey;
+                    @include translate(-2px);
+                }
+                &:active {
+                    box-shadow: -1px 1px $darkGrey;
+                    @include translate(2px);
+                }
+                
+                i {
+                    font-size: 1.2rem;
+                    color: $darkGrey !important;
+                    transition: 0.2s;
+                    @include mQ($sm) {
+                        font-size: 1.3rem;
+                    }
+                    @include mQ(xxs) {
+                        font-size: 1.2rem;
+                    }
+                }
+                .nav-span {
+                    display: absolute;
+                    font-size: 0.8rem;
+                    top: 3rem;
+                    white-space: nowrap;
+                    color: $darkGrey !important;
+                    text-transform: lowercase;
+                    transition: 0.2s;
+                    @include centerX;
+                    @include mQ($sm) {
+                        font-size: 0.95rem;
+                        top: 3.5rem;
+                    }
+                    @include mQ($xxs) {
+                        font-size: 0.9rem;
+                        top: 3.2rem;
+                    }
+                }
+            }
+        }
+    }
+}// navbar end
+
+//CAROUSEL
+.carousel {
+    height: calc(100vh - 90px);
+    width: 100vw;
+    overflow: hidden;
+    @include mQ($sm) {
+        height: calc(100vh - 78px);  
+    }
+    .carousel-indicators {
+        li {
+            border: 8px solid $red;
+            height: 5px;
+            width: 5px;
+            margin: 10px;
+            border-radius: 50%;
+            @include mQ($sm) {
+                border: 6px solid $red;
+            }
+        }
+    }
+    .carousel-inner {
+        height: 100%;
+        .carousel-item {
+            button {
+                    margin-top: 50px !important;
+                    font-size: 1.5rem;
+                    @include mQ($sm) {
+                        font-size: 1rem;
+                        margin-top: 10px !important;
+                    }
+                }
+            &:first-child {
+                h3 {
+                    color: $darkGrey !important;
+                    margin-top: 20vmin !important;
+                    @include mQ($lg) {
+                        margin-top: 16vmin !important;
+                    }
+                    @include mQ($sm) {
+                        margin-top: 0px;
+                    }
+                }
+                h1 {
+                    text-shadow: -5px 5px $darkGrey, -3px 3px $darkGrey;
+                }
+                h1, button {
+                    color: $red !important;
+                }
+                img {
+                    height: 70vmin;
+                    @include mQ($sm) {
+                         height: 35vh;   
+                    }
+                }
+                #heat-slime {
+                    opacity: 0;
+                    position: absolute;
+                    animation: heat 1.5s infinite;
+                    @include centerX;
+                    top: 0;
+                }
+            }
+            &:nth-child(2) {
+                margin-top: 17vmin !important;
+                    @include mQ($lg) {
+                        margin-top: 16vmin !important;
+                    }
+                @include mQ($sm) {
+                    margin-top: 50px;
+                }
+                h1 {
+                    margin-top: 3vmin !important;
+                    @include mQ($lg) {
+                        margin-top: 0vmin !important;
+                    }
+                    @include mQ($sm) {
+                        margin-top: 0px;
+                    }
+                    
+                    text-shadow: -5px 5px $red, -3px 3px $red;
+                }
+                img {
+                    width: 100%;
+                    @include mQ($sm) {
+                        width: 50%;
+                    }
+                    &.variety {
+                        opacity: 0;
+                        top: 0;
+                        animation: variety 3s infinite;
+                        @include centerX;
+                        &:nth-child(2) {
+                            animation-delay: 1s;
+                        }
+                        &:nth-child(3) {
+                            animation-delay: 2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    [class^="carousel-control"] {
+        opacity: 0.2;
+        transition: 0.2s;
+        &:hover {
+            opacity: 1;
+        }
+        i {
+            color: $red !important;
+            font-size: 1.5rem;
+        }
+    }
+} //carousel end
+
+//MODAL 
+.modal {
+    .modal-content {
+        border-radius: 20px;
+    }
+    .modal-header {
+        position: relative;
+        padding: 30px;
+        i {
+            font-size: 1.5rem;
+            @include centerY;
+        }
+        button {
+            width: 2rem;
+            height: 2rem;
+            padding: 0 !important;
+            color: $darkGrey !important;
+            box-shadow: none;
+            line-height: 0.5;
+            border: 1px solid $darkGrey;
+            &:hover {
+                box-shadow: none;
+                transform: none;
+            }
+        }
+    }
+    .modal-body {
+        padding: 25px;
+        input[type="email"] {
+            font-family: $textFont;
+            font-size: 1.2rem;
+            padding: 0.5rem 1.5rem !important;
+            border-radius: 50px;
+            border: 2px solid $darkGrey;
+            color: $darkGrey;
+            box-shadow: -5px 5px $darkGrey;
+            position: relative;
+            z-index: 10;
+        }
+        input[type="submit"] {
+            font-family: $headerFont;
+            background-color: transparent;
+            border: none;
+            color: $red !important;
+            padding: 0;
+            &:active {
+                background-color: transparent;
+                color: $red;
+            }
+        }
+    }
+} // modal end
+
+// TEAM
+.media {
+    color: $darkGrey !important;
+    img {
+        border-radius: 50%;
+        padding: 0;
+        border: 10px solid white;
+        box-shadow: -5px 5px $red;
+    }
+    h4 {
+        border-bottom: 3px solid $darkGrey;
+    }
+}
+
+//JUMBOTRON
+.jumbotron {
+    background-color: white;
+    border-bottom: 3px solid $darkGrey;
+    h1 {
+        color: $red !important;
+        text-shadow: -5px 5px $darkGrey, -3px 3px $darkGrey;
+        @include mQ($sm) {
+            font-size: 4rem;
+        }
+    }
+}
+
+//PRODUCT LISTING
+#products {
+    border-bottom: 2px solid $darkGrey;
+    div {
+        h4 {
+            @include mQ($xs) {
+                font-size: 1.3rem;
+            }
+        }
+        figure {
+            background-size: 85%;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: 0.2s;
+            cursor: pointer;
+            position: relative;
+            background-image: url(../../assets/images/slime-product-1.jpg);
+            div {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                border: 3px solid white;
+                box-shadow: -2px 2px $darkGrey;
+                @include mQ($xxs) {
+                    width: 25px;
+                    height: 25px;
+                    bottom: 10px;
+                    right: 10px;
+                }
+
+            }
+            &::before {
+                content: "";
+                display: block;
+                padding-top: 100%;
+            }
+            
+            &.one {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-2.jpg);
+                }
+                div {
+                    background-color: #d95367;
+                }
+            }
+            &.two {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-3.jpg);
+                }
+                div {
+                    background-color: #da93a5;
+                }
+            }
+            &.three {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-4.jpg);
+                }
+                div {
+                    background-color: #cfa39c;
+                }
+            }
+            &.four {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-5.jpg);
+                }
+                div {
+                    background-color: #bbd6d1;
+                }
+            }
+            &.five {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-6.jpg);
+                }
+                div {
+                    background-color: #66bfcd;
+                }
+            }
+            &.six {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-7.jpg);
+                }
+                div {
+                    background-color: #7a4530;
+                }
+            }
+            &.seven {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-8.jpg);
+                }
+                div {
+                    background-color: #9e75c2;
+                }
+            }
+            &.eight {
+                &:hover {
+                    background-image: url(../../assets/images/slime-product-9.jpg);
+                }
+                div {
+                    background-color: #bacbda;
+                }
+            }
+        }
+    }
+}//product list end
+
+//PRODUCT TABLE
+
+th {
+    border-bottom: 2px solid $darkGrey !important;
+    border-top: 1px solid $darkGrey !important;
+}
+td {
+    border-top: 1px solid $darkGrey !important;
+    border-bottom: 1px solid $darkGrey !important;
+}
+tr {
+    transition: 0.2s;
+}
+tbody tr:hover {
+    background-color: $red !important;
+}
+table ~ h4 {
+    position: absolute !important;
+    bottom: 0;
+    right: 0;
+    @include mQ($sm) {
+        position: relative !important;
+        bottom: none;
+        
+    }
+}
+
+
+//product table end
+
+//FEATURETTE
+hr {
+    border-bottom: 3px solid $darkGrey;
+}
+.featurette {
+    h1 {
+        font-size: 6rem !important; 
+        color: $red !important;
+        text-shadow: -5px 5px $darkGrey, -3px 3px $darkGrey;
+    }
+    
+}
