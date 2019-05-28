@@ -21,8 +21,16 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: #acacac; }
 
-h1, h2 {
+h1, h2, h5 {
   font-weight: 700; }
+
+h1 {
+  font-size: 6.7rem;
+  letter-spacing: 15px;
+  line-height: 1; }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 4.5rem; } }
 
 h2 {
   font-size: 4.7rem;
@@ -31,9 +39,21 @@ h2 {
     h2 {
       font-size: 3.25rem; } }
 
+h3, h4 {
+  font-family: "EB Garamond", serif; }
+
+h3 {
+  font-size: 1.8rem; }
+
 h4 {
-  font-family: "EB Garamond", serif;
   font-size: 1.2rem; }
+
+h5 {
+  font-size: 2.5rem; }
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.5; }
 
 .btn {
   background-color: #1a1a1a;
@@ -69,6 +89,20 @@ h4 {
 
 .brown {
   color: #a95121 !important; }
+
+.line-streak {
+  padding: 0 20px; }
+  .line-streak::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #606060;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
 
 .container-fluid {
   margin: 0 !important;
@@ -161,6 +195,8 @@ img {
         .nav-container .navbar .navbar-nav .nav-item.active a::before {
           content: url(../../images/flower.png);
           z-index: -1;
+          -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
           position: absolute;
           top: 50%;
           left: 50%;
@@ -191,6 +227,77 @@ img {
 #shop {
   background-color: #f1f1f1;
   padding-top: 109px; }
+
+#our-story {
+  background-color: #f9f9f9;
+  padding-bottom: 200px; }
+  #our-story .flower-bed:first-child {
+    width: 100%;
+    background-color: #f1f1f1;
+    position: absolute;
+    z-index: 10; }
+    @media (max-width: 768px) {
+      #our-story .flower-bed:first-child {
+        width: 800px !important; } }
+  #our-story .side-images img {
+    position: absolute;
+    z-index: 15;
+    width: 20vw !important; }
+    @media (max-width: 992px) {
+      #our-story .side-images img {
+        display: none; } }
+  #our-story .side-images .girl-pouring-tea {
+    width: 20vw !important;
+    left: 0;
+    top: calc(32vw - 1800px); }
+  #our-story .side-images .loose-tea-leaves {
+    right: 0;
+    top: -550px; }
+  #our-story .text {
+    top: 50px;
+    z-index: 11; }
+    #our-story .text .tea-maker {
+      position: relative; }
+    #our-story .text h1 {
+      position: relative;
+      left: 7px;
+      margin-top: -70px; }
+      @media (max-width: 768px) {
+        #our-story .text h1 {
+          margin-top: -47px; } }
+    #our-story .text h3 {
+      position: relative;
+      background-color: #f9f9f9;
+      display: inline-block; }
+      #our-story .text h3::after {
+        width: 350px;
+        z-index: -1; }
+        @media (max-width: 1200px) {
+          #our-story .text h3::after {
+            width: 300px !important; } }
+    #our-story .text h5 {
+      position: relative; }
+      #our-story .text h5::after {
+        content: url(../../images/our-story/flower.png);
+        z-index: -1;
+        -webkit-transform: scale(0.7) translate(-30%, -20%) !important;
+        -ms-transform: scale(0.7) translate(-30%, -20%) !important;
+        transform: scale(0.7) translate(-30%, -20%) !important;
+        -webkit-transform-origin: -50% -50%;
+        -ms-transform-origin: -50% -50%;
+        transform-origin: -50% -50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+    #our-story .text p {
+      position: relative;
+      left: 20px; }
+      @media (max-width: 1200px) {
+        #our-story .text p {
+          left: 0; } }
 
 #contact {
   padding: 200px 0 14vw 0;
