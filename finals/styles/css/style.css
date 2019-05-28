@@ -19,7 +19,7 @@ body::-webkit-scrollbar {
   background-color: #F5F5F5; }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #989898; }
+  background-color: #acacac; }
 
 h1, h2 {
   font-weight: 700; }
@@ -79,6 +79,10 @@ img {
   -moz-user-select: none !important;
   -ms-user-select: none !important;
   user-select: none !important; }
+
+img {
+  width: 100% !important;
+  z-index: -1; }
 
 .navbar-brand {
   display: block;
@@ -164,7 +168,7 @@ img {
           -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
         .nav-container .navbar .navbar-nav .nav-item a {
-          color: #989898 !important;
+          color: #acacac !important;
           letter-spacing: 2px;
           font-size: 0.9rem;
           -webkit-transition: 0.2s;
@@ -194,10 +198,10 @@ img {
   position: relative; }
   @media (max-width: 1600px) {
     #contact {
-      padding: 200px 0 220px 0; } }
-  @media (max-width: 768px) {
+      padding: 200px 0 200px 0; } }
+  @media (max-width: 992px) {
     #contact {
-      padding: 140px 0 200px 0; } }
+      padding: 140px 0 150px 0; } }
   #contact h2::before {
     content: url(../../images/contact/leaf.png);
     z-index: -1;
@@ -227,7 +231,9 @@ img {
     z-index: 1;
     bottom: 0;
     width: 1300px;
-    min-width: 100%; }
+    min-width: 100%;
+    -webkit-filter: brightness(1.3);
+    filter: brightness(1.3); }
     @media (max-width: 768px) {
       #contact .flower-bed {
         width: 1000px; } }
