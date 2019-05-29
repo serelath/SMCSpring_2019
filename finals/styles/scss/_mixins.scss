@@ -28,3 +28,19 @@
 	-ms-box-sizing: border-box !important;
 	box-sizing: border-box !important;
 }
+
+// health benefit num
+@mixin healthNum {
+	font-size: 6.7rem;
+	color: $green;
+	position: absolute;
+	top: -62px;
+	left: -65px;
+	z-index: 11;
+	@include mQ($xs) {
+		font-size: 3rem;
+		top: 0 ;
+		left: 50% !important;
+		transform: translate(-50%, -100%);
+	}
+}

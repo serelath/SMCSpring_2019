@@ -34,7 +34,8 @@ h1 {
 
 h2 {
   font-size: 4.7rem;
-  letter-spacing: 7px; }
+  letter-spacing: 7px;
+  line-height: 1; }
   @media (max-width: 768px) {
     h2 {
       font-size: 3.25rem; } }
@@ -46,10 +47,13 @@ h3 {
   font-size: 1.8rem; }
 
 h4 {
-  font-size: 1.4rem; }
+  font-size: 1.5rem; }
 
 h5 {
   font-size: 2.5rem; }
+  @media (max-width: 768px) {
+    h5 {
+      font-size: 2rem; } }
 
 p {
   font-size: 1.1rem;
@@ -68,10 +72,8 @@ p {
   -o-transition: 0.2s;
   transition: 0.2s;
   cursor: pointer !important; }
-  .btn:hover::before {
-    -webkit-transform: translate(-55%, -100%) scale(0.75);
-    -ms-transform: translate(-55%, -100%) scale(0.75);
-    transform: translate(-55%, -100%) scale(0.75); }
+  .btn:hover {
+    color: #acacac !important; }
   .btn::before {
     content: url("../../images/herb.png");
     position: absolute;
@@ -90,12 +92,18 @@ p {
 .brown {
   color: #a95121 !important; }
 
+.green {
+  color: #7ab08d !important; }
+
 .line-streak {
-  padding: 0 20px; }
+  padding: 0 20px;
+  display: inline-block;
+  position: relative; }
   .line-streak::after {
     content: '';
     width: 100%;
     height: 1px;
+    z-index: -1;
     background-color: #606060;
     position: absolute;
     top: 50%;
@@ -242,6 +250,9 @@ img {
     -webkit-filter: brightness(0.95);
     filter: brightness(0.95);
     margin-top: -100px; }
+    @media (max-width: 992px) {
+      #our-story .flower-bed-two {
+        margin-top: 50px; } }
   #our-story .side-images img {
     position: absolute;
     z-index: 15;
@@ -269,12 +280,9 @@ img {
         #our-story .text h1 {
           margin-top: -47px; } }
     #our-story .text h3 {
-      position: relative;
-      background-color: #f9f9f9;
-      display: inline-block; }
+      background-color: #f9f9f9; }
       #our-story .text h3::after {
-        width: 350px;
-        z-index: -1; }
+        width: 350px; }
         @media (max-width: 1200px) {
           #our-story .text h3::after {
             width: 300px !important; } }
@@ -302,8 +310,181 @@ img {
         #our-story .text p {
           left: 0; } }
 
-#health-benefits .flower-bed {
-  background-color: #e7e4e2; }
+#health-benefits {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  background-color: #f9f9f9; }
+  #health-benefits .flower-bed {
+    position: relative;
+    z-index: 10;
+    background-color: #f1f1f1;
+    top: -120px;
+    min-width: 100%; }
+    @media (max-width: 1200px) {
+      #health-benefits .flower-bed {
+        width: 1200px !important; } }
+    @media (max-width: 768px) {
+      #health-benefits .flower-bed {
+        top: -50px;
+        width: 100% !important; } }
+  #health-benefits .flower-bed-two {
+    position: absolute;
+    bottom: 0;
+    z-index: 20; }
+    @media (max-width: 992px) {
+      #health-benefits .flower-bed-two {
+        position: relative;
+        margin-top: 25px; } }
+  #health-benefits .tea img {
+    position: absolute;
+    z-index: 10; }
+    #health-benefits .tea img:first-child {
+      width: 19vw !important;
+      top: 1100px;
+      right: 0; }
+      @media (max-width: 992px) {
+        #health-benefits .tea img:first-child {
+          display: none; } }
+    #health-benefits .tea img:nth-child(2) {
+      width: 40vw !important;
+      top: 1750px; }
+      @media (max-width: 1200px) {
+        #health-benefits .tea img:nth-child(2) {
+          top: 1850px; } }
+      @media (max-width: 992px) {
+        #health-benefits .tea img:nth-child(2) {
+          position: relative;
+          top: 0;
+          width: 100vw !important; } }
+  #health-benefits h2 {
+    position: relative;
+    margin-top: -240px;
+    z-index: 11; }
+    @media (max-width: 768px) {
+      #health-benefits h2 {
+        margin-top: -85px; } }
+  #health-benefits h3 {
+    background-color: #f9f9f9; }
+    #health-benefits h3::after {
+      width: 350px !important; }
+      @media (max-width: 1200px) {
+        #health-benefits h3::after {
+          width: 300px !important; } }
+  #health-benefits .sources {
+    position: relative;
+    z-index: 11; }
+  #health-benefits .sources {
+    top: -450px;
+    position: relative; }
+    @media (max-width: 992px) {
+      #health-benefits .sources {
+        top: 25px; } }
+  #health-benefits .text {
+    top: -450px;
+    position: relative; }
+    @media (max-width: 1200px) {
+      #health-benefits .text {
+        top: -350px; } }
+    @media (max-width: 992px) {
+      #health-benefits .text {
+        top: 25px; } }
+    #health-benefits .text > div {
+      position: relative; }
+      @media (max-width: 992px) {
+        #health-benefits .text > div {
+          left: 0 !important; } }
+      #health-benefits .text > div.one {
+        left: 75%; }
+        #health-benefits .text > div.one h5::before {
+          content: '1';
+          left: -55px !important;
+          font-size: 6.7rem;
+          color: #7ab08d;
+          position: absolute;
+          top: -62px;
+          left: -65px;
+          z-index: 11; }
+          @media (max-width: 768px) {
+            #health-benefits .text > div.one h5::before {
+              font-size: 3rem;
+              top: 0;
+              left: 50% !important;
+              -webkit-transform: translate(-50%, -100%);
+              -ms-transform: translate(-50%, -100%);
+              transform: translate(-50%, -100%); } }
+      #health-benefits .text > div.two {
+        left: 0; }
+        #health-benefits .text > div.two h5::before {
+          content: '2';
+          font-size: 6.7rem;
+          color: #7ab08d;
+          position: absolute;
+          top: -62px;
+          left: -65px;
+          z-index: 11; }
+          @media (max-width: 768px) {
+            #health-benefits .text > div.two h5::before {
+              font-size: 3rem;
+              top: 0;
+              left: 50% !important;
+              -webkit-transform: translate(-50%, -100%);
+              -ms-transform: translate(-50%, -100%);
+              transform: translate(-50%, -100%); } }
+      #health-benefits .text > div.three {
+        left: 40%; }
+        #health-benefits .text > div.three h5::before {
+          content: '3';
+          font-size: 6.7rem;
+          color: #7ab08d;
+          position: absolute;
+          top: -62px;
+          left: -65px;
+          z-index: 11; }
+          @media (max-width: 768px) {
+            #health-benefits .text > div.three h5::before {
+              font-size: 3rem;
+              top: 0;
+              left: 50% !important;
+              -webkit-transform: translate(-50%, -100%);
+              -ms-transform: translate(-50%, -100%);
+              transform: translate(-50%, -100%); } }
+      #health-benefits .text > div.four {
+        left: 0; }
+        #health-benefits .text > div.four h5::before {
+          content: '4';
+          font-size: 6.7rem;
+          color: #7ab08d;
+          position: absolute;
+          top: -62px;
+          left: -65px;
+          z-index: 11; }
+          @media (max-width: 768px) {
+            #health-benefits .text > div.four h5::before {
+              font-size: 3rem;
+              top: 0;
+              left: 50% !important;
+              -webkit-transform: translate(-50%, -100%);
+              -ms-transform: translate(-50%, -100%);
+              transform: translate(-50%, -100%); } }
+      #health-benefits .text > div.five {
+        left: 40%; }
+        #health-benefits .text > div.five h5::before {
+          content: '5';
+          font-size: 6.7rem;
+          color: #7ab08d;
+          position: absolute;
+          top: -62px;
+          left: -65px;
+          z-index: 11; }
+          @media (max-width: 768px) {
+            #health-benefits .text > div.five h5::before {
+              font-size: 3rem;
+              top: 0;
+              left: 50% !important;
+              -webkit-transform: translate(-50%, -100%);
+              -ms-transform: translate(-50%, -100%);
+              transform: translate(-50%, -100%); } }
 
 #contact {
   padding: 200px 0 14vw 0;
@@ -333,7 +514,7 @@ img {
   #contact .white-paint {
     position: absolute;
     z-index: 1;
-    top: 220px;
+    top: 215px;
     height: 550px; }
     @media (max-width: 768px) {
       #contact .white-paint {

@@ -49,6 +49,7 @@ h1 {
 h2 {
     font-size: 4.7rem;
     letter-spacing: 7px;
+	line-height: 1;
     @include mQ($xs) {
         font-size: 3.25rem;
     }
@@ -60,10 +61,13 @@ h3 {
 	font-size: 1.8rem;
 }
 h4 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 h5 {
 	font-size: 2.5rem;
+	@include mQ($xs) {
+        font-size: 2rem;
+    }
 }
 p {
 	font-size: 1.1rem;
@@ -80,9 +84,12 @@ p {
     position: relative;
     transition: 0.2s;
     cursor: pointer !important;
-    &:hover::before {
-        transform: translate(-55%, -100%) scale(0.75);
-    }
+	&:hover {
+		color: $darkGrey !important;
+	}
+//    &:hover::before {
+//        transform: translate(-55%, -100%) scale(0.75);
+//    }
     &::before {
         content: url('../../images/herb.png');
         position: absolute;
@@ -96,12 +103,18 @@ p {
 .brown {
     color: $brown !important;
 }
+.green {
+    color: $green !important;
+}
 .line-streak {
 	padding: 0 20px;
+	display: inline-block;
+	position: relative;
 	&::after {
 		content: '';
 		width: 100%;
 		height: 1px;
+		z-index: -1;
 		background-color: $darkerGrey;
 		@include centerer;
 	}
@@ -269,6 +282,9 @@ img {
 	.flower-bed-two {
 		filter: brightness(0.95);
 		margin-top: -100px;
+		@include mQ($sm) {
+			margin-top: 50px;
+		}
 	}
 	.side-images {
 		img {
@@ -305,12 +321,9 @@ img {
 			}
 		}
 		h3 {
-			position: relative;
 			background-color: $white;
-			display: inline-block;
 			&::after {
 				width: 350px;
-				z-index: -1;
 				@include mQ($md) {
 					width: 300px !important;
 				}
@@ -341,8 +354,147 @@ img {
 // HEALTH BENEFITS //
 /////////////////////
 #health-benefits {
+	position: relative;
+	padding-top: 100px;
+	padding-bottom: 0px;
+	background-color: $white;
 	.flower-bed {
-		background-color: $grey;
+		position: relative;
+		z-index: 10;
+		background-color: $lightGrey;
+		top: -120px;
+		min-width: 100%;
+		@include mQ($md) {
+			width: 1200px !important;
+		}
+		@include mQ($xs) {
+			top: -50px;
+			width: 100% !important;
+		}
+	}
+	.flower-bed-two {
+		position: absolute;
+		bottom: 0;
+		z-index: 20;
+		@include mQ($sm) {
+			position: relative;
+			margin-top: 25px;
+		}
+	}
+	.tea img {
+		position: absolute;
+		z-index: 10;
+		&:first-child {
+			width: 19vw !important;
+			top: 1100px;
+			right: 0;
+			@include mQ($sm) {
+				display: none;
+			}
+		}
+		&:nth-child(2) {
+			width: 40vw !important;
+			top: 1750px;
+			@include mQ($md) {
+				top: 1850px;
+			}
+			@include mQ($sm) {
+				position: relative;
+				top: 0;
+				width: 100vw !important;
+			}
+		}
+	}
+	h2 {
+		position: relative;
+		margin-top: -240px;
+		z-index: 11;
+		@include mQ($xs) {
+			margin-top: -85px;
+		}
+	}
+	h3 {
+		background-color: $white;
+		&::after {
+			width: 350px !important;
+			@include mQ($md) {
+				width: 300px !important;
+			}
+		}
+	}
+	.sources {
+		position: relative;
+		z-index: 11;
+	}
+	.sources {
+		top: -450px;
+		position: relative;
+		@include mQ($sm) {
+			top: 25px;
+		}
+	}
+	.text {
+		top: -450px;
+		position: relative;
+		@include mQ($md) {
+			top: -350px;
+		}
+		@include mQ($sm) {
+			top: 25px;
+		}
+		& > div {
+			position: relative;
+			@include mQ($sm) {
+				left: 0 !important;
+			}
+			&.one {
+				left: 75%;
+
+				h5 {
+					&::before {
+						content: '1';
+						left: -55px !important;
+						@include healthNum;
+					}
+				}
+			}
+			&.two {
+				left: 0;
+				h5 {
+					&::before {
+						content: '2';
+						@include healthNum;
+					}
+				}
+			}
+			&.three {
+				left: 40%;
+				h5 {
+					&::before {
+						content: '3';
+						@include healthNum;
+					}
+				}
+			}
+			&.four {
+				left: 0;
+				h5 {
+					&::before {
+						content: '4';
+						@include healthNum;
+					}
+				}
+			}
+			&.five {
+				left: 40%;
+				h5 {
+					&::before {
+						content: '5';
+						@include healthNum;
+					}
+				}
+			}
+		}
 	}
 }
 //health benefits end
@@ -377,7 +529,7 @@ img {
     .white-paint {
         position: absolute;
         z-index: 1;
-        top: 220px;
+        top: 215px;
         height: 550px;
         @include mQ($xs) {
             height: 675px;
