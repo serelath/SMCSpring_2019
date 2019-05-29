@@ -162,7 +162,7 @@ img {
 .nav-container {
     position: fixed;
     z-index: 100;
-
+	box-shadow: 2px 0 4px rgba(0,0,0, 0.05);
 .navbar {
     background-color: $white;
     position: relative;
@@ -405,10 +405,12 @@ img {
 			}
 		}
 	}
-	h2 {
+	h2, p {
 		position: relative;
-		margin-top: -240px;
 		z-index: 11;
+	}
+	h2 {
+		margin-top: -240px;
 		@include mQ($xs) {
 			margin-top: -85px;
 		}

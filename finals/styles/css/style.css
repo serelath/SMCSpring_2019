@@ -152,7 +152,9 @@ img {
 
 .nav-container {
   position: fixed;
-  z-index: 100; }
+  z-index: 100;
+  -webkit-box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05); }
   .nav-container .navbar {
     background-color: #f9f9f9;
     position: relative; }
@@ -357,10 +359,11 @@ img {
           position: relative;
           top: 0;
           width: 100vw !important; } }
-  #health-benefits h2 {
+  #health-benefits h2, #health-benefits p {
     position: relative;
-    margin-top: -240px;
     z-index: 11; }
+  #health-benefits h2 {
+    margin-top: -240px; }
     @media (max-width: 768px) {
       #health-benefits h2 {
         margin-top: -85px; } }
