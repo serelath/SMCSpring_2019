@@ -511,7 +511,7 @@ img {
     @media (max-width: 768px) {
       #contact h2::before {
         content: url(../../images/contact/leaf-small.png); } }
-  #contact h2, #contact h4, #contact form {
+  #contact h2, #contact h4, #contact form, #contact h3 {
     position: relative;
     z-index: 2; }
   #contact .white-paint {
@@ -547,9 +547,13 @@ img {
     border-top: 0; }
   #contact form textarea {
     resize: none; }
+  #contact .red {
+    color: red !important; }
 
 footer {
-  background-color: #1a1a1a; }
+  background-color: #1a1a1a;
+  position: relative;
+  z-index: 2; }
   footer .navbar-brand, footer .serif {
     color: #f9f9f9 !important;
     position: relative;

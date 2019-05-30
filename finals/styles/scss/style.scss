@@ -524,7 +524,7 @@ img {
             }
         }
     }
-    h2, h4, form {
+    h2, h4, form, h3 {
         position: relative;
         z-index: 2;
     }
@@ -568,6 +568,9 @@ img {
             resize: none;
         }
     }
+	.red {
+		color: red !important;
+	}
 }
 //contact end
 
@@ -576,6 +579,8 @@ img {
 ////////////
 footer {
     background-color: $black;
+	position: relative;
+	z-index: 2;
     .navbar-brand, .serif {
         color: $white !important;
         position: relative;
