@@ -670,6 +670,22 @@ img {
   #contact .red {
     color: red !important; }
 
+#social {
+  position: fixed;
+  padding: 10px;
+  bottom: 0;
+  right: 0;
+  z-index: 100; }
+
+.social i {
+  padding: 2px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+  .social i:hover {
+    color: #7ab08d !important; }
+
 footer {
   background-color: #1a1a1a;
   position: relative;
@@ -684,3 +700,12 @@ footer {
   footer p {
     color: #f9f9f9 !important;
     font-size: 0.8rem; }
+  footer i {
+    color: #f9f9f9 !important;
+    font-size: 1.5rem;
+    padding: 5px !important;
+    position: relative;
+    left: -5px; }
+    @media (max-width: 992px) {
+      footer i {
+        font-size: 1.2rem; } }

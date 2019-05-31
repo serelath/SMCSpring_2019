@@ -716,6 +716,28 @@ img {
 //contact end
 
 ////////////
+// SOCIAL //
+////////////
+#social {
+	position: fixed;
+	padding: 10px;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+}
+.social {
+	i {
+		padding: 2px;
+		cursor: pointer;
+		transition: 0.2s;
+		&:hover {
+			color: $green !important;
+		}
+	}
+}
+//social end
+
+////////////
 // FOOTER //
 ////////////
 footer {
@@ -732,4 +754,14 @@ footer {
         color: $white !important;
         font-size: 0.8rem;
     }
+	i {
+		color: $white !important;
+		font-size: 1.5rem;
+		padding: 5px !important;
+		position: relative;
+		left: -5px;
+		@include mQ($sm) {
+			font-size: 1.2rem;
+		}
+	}
 }
