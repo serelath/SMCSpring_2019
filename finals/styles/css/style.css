@@ -672,13 +672,13 @@ img {
 
 #social {
   position: fixed;
-  padding: 10px;
+  padding: 20px;
   bottom: 0;
   right: 0;
   z-index: 100; }
 
 .social i {
-  padding: 2px;
+  padding: 3px;
   cursor: pointer;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
