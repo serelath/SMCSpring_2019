@@ -26,7 +26,7 @@ h1, h2, h5 {
   line-height: 1; }
 
 h1 {
-  font-size: 7.5rem;
+  font-size: 7rem;
   letter-spacing: 15px; }
   @media (max-width: 767px) {
     h1 {
@@ -314,8 +314,8 @@ img {
     position: relative; }
     #home .our-story .white-paint {
       position: absolute;
-      top: -75px;
-      height: 135%; }
+      top: -100px;
+      height: 140%; }
       @media (max-width: 992px) {
         #home .our-story .white-paint {
           top: -90px;
@@ -325,7 +325,7 @@ img {
           top: -70px;
           height: 140%; } }
     #home .our-story .pouring-tea {
-      margin-top: -80px; }
+      margin-top: 20px; }
       @media (max-width: 992px) {
         #home .our-story .pouring-tea {
           margin-top: 10px; } }
@@ -336,10 +336,10 @@ img {
       margin-top: -25px; }
   #home .benefits {
     padding-bottom: 100px;
-    padding-top: 75px; }
+    padding-top: 100px; }
     @media (max-width: 767px) {
       #home .benefits {
-        padding-top: 50px; } }
+        padding-top: 60px; } }
     #home .benefits img {
       width: 75px; }
 

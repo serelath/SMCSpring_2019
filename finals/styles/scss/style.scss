@@ -40,7 +40,7 @@ h1, h2, h5 {
 	line-height: 1;
 }
 h1 {
-	font-size: 7.5rem;
+	font-size: 7rem;
     letter-spacing: 15px;
     @include mQ($xs) {
         font-size: 4.5rem;
@@ -347,8 +347,8 @@ img {
 		position: relative;
 		.white-paint {
 			position: absolute;
-			top: -75px;
-			height: 135%;
+			top: -100px;
+			height: 140%;
 			@include mQ($sm) {
 				top: -90px;
 				height: 140%;
@@ -360,7 +360,7 @@ img {
 			
 		}
 		.pouring-tea {
-			margin-top: -80px;
+			margin-top: 20px;
 			@include mQ($sm) {
 				margin-top: 10px;
 			}
@@ -375,9 +375,9 @@ img {
 	}
 	.benefits {
 		padding-bottom: 100px;
-		padding-top: 75px;
+		padding-top: 100px;
 		@include mQ($xs) {
-			padding-top: 50px;
+			padding-top: 60px;
 		}
 		img {
 			width: 75px;
