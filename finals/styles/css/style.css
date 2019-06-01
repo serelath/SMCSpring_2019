@@ -449,7 +449,7 @@ img {
       display: inline-block; }
       #shop ul li a {
         padding: 0.5rem 1rem;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         text-decoration: none;
         -webkit-transition: 0.2s;
         -o-transition: 0.2s;
@@ -460,6 +460,8 @@ img {
           #shop ul li a {
             font-size: 0.8rem;
             padding: 1rem 1rem; } }
+        #shop ul li a.active {
+          color: #7ab08d !important; }
 
 #our-story {
   background-color: #f9f9f9; }

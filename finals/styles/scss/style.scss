@@ -496,7 +496,7 @@ img {
 			display: inline-block;
 			a {
 				padding: 0.5rem 1rem;
-				letter-spacing: 1px;
+				letter-spacing: 2px;
 				text-decoration: none;
 				transition: 0.2s;
 				&:hover {
@@ -505,6 +505,9 @@ img {
 				@include mQ($sm) {
 					font-size: 0.8rem;
 					padding: 1rem 1rem;
+				}
+				&.active {
+					color: $green !important;
 				}
 			}
 		}
