@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb
 /////////////////
 // TEXT STYLES //
 /////////////////
-h1, h2, h5 {
+h1, h2, h5, h6 {
     font-weight: 700;
 	line-height: 1;
 }
@@ -71,6 +71,9 @@ h5 {
 	@include mQ($xs) {
         font-size: 2rem;
     }
+}
+h6 {
+	font-size: 1.2rem;
 }
 p {
 	font-size: 1.1rem;
@@ -337,13 +340,14 @@ img {
 		h3 {
 			background-color: $lightGrey;
 			&::after {
-				width: 992px;
+				width: 150px;
 				@include mQ($sm) {
 					
 				}
 			}
 		}
 	}
+
 	.our-story {
 		position: relative;
 		.white-paint {
@@ -392,6 +396,76 @@ img {
 		}
 	}
 }
+.listings {
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+	padding: 0 1%;
+	& > a > div {
+		width: 21%;
+		overflow: hidden;
+		position: relative;
+		background-color: white;
+		display: inline-block;
+		margin: 1.86%;
+		box-shadow: 0 .25px .25px rgba(0,0,0,0.1);
+		@include mQ($md) {
+			margin: 1.82%;
+		}
+		@include mQ($sm) {
+			width: 29%;
+			margin: 1.95%;
+		}
+		@include mQ($xs) {
+			width: 45%;
+			margin: 1.95%;
+		}
+		&:hover > img {
+			transform: scale(0.95);
+			filter: saturate(1);
+		}
+		img {
+			transition: 0.3s ease-out;
+			filter: saturate(0.8);
+			width: 80% !important;
+		}
+		.label {
+			@include centerer;
+			position: relative;
+			h6 {
+				position: relative;
+			}
+			.cost {
+				h5 {
+					margin-top: 0px;
+				}
+				p {
+					font-size: 0.8rem;
+					margin-top: -10px;
+				}
+			}
+		}
+		.category {
+			z-index: 2;
+			position: absolute;
+			left: -65px;
+			top: 25px;
+			font-size: 0.8rem;
+			color: $white !important;
+			font-weight: 700;
+			letter-spacing: 1px;
+			transform: rotate(-45deg);
+			width: 200px;
+			&.new {
+				background-color: $green;
+			}
+			&.hot {
+				background-color: $brown;
+			}
+		}
+
+	}
+}
 //homepage end
 
 //////////
@@ -400,6 +474,41 @@ img {
 #shop {
     background-color: $lightGrey;
     padding-top: 109px;
+	padding-bottom: 100px;
+	.tea-cups {
+		width: 100%;
+		filter: saturate(0) brightness(1.1);
+	}
+	h1 {
+		margin-top: -75px;
+		left: 5px;
+		position: relative;
+		z-index: 1;
+		@include mQ($sm) {
+			margin-top: -50px;
+		}
+	}
+	ul {
+		padding-left: 0;
+		li {
+			list-style-type: none;
+			margin: 8px 0;
+			display: inline-block;
+			a {
+				padding: 0.5rem 1rem;
+				letter-spacing: 1px;
+				text-decoration: none;
+				transition: 0.2s;
+				&:hover {
+					color: $green !important;
+				}
+				@include mQ($sm) {
+					font-size: 0.8rem;
+					padding: 1rem 1rem;
+				}
+			}
+		}
+	}
 }
 //shop end
 
@@ -420,6 +529,7 @@ img {
 	.flower-bed-two {
 		filter: brightness(0.95);
 		margin-top: -75px;
+		width: 100%;
 		@include mQ($xs) {
 			margin-top: 50px;
 		}
@@ -515,6 +625,7 @@ img {
 		}
 	}
 	.flower-bed-two {
+		width: 100%;
 		position: absolute;
 		bottom: 0;
 		z-index: 20;

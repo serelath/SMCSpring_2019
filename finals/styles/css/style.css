@@ -21,7 +21,7 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: #acacac; }
 
-h1, h2, h5 {
+h1, h2, h5, h6 {
   font-weight: 700;
   line-height: 1; }
 
@@ -57,6 +57,9 @@ h5 {
   @media (max-width: 767px) {
     h5 {
       font-size: 2rem; } }
+
+h6 {
+  font-size: 1.2rem; }
 
 p {
   font-size: 1.1rem;
@@ -310,7 +313,7 @@ img {
     #home .tea h3 {
       background-color: #f1f1f1; }
       #home .tea h3::after {
-        width: 992px; }
+        width: 150px; }
   #home .our-story {
     position: relative; }
     #home .our-story .white-paint {
@@ -351,9 +354,112 @@ img {
       -webkit-filter: brightness(1.2);
       filter: brightness(1.2); }
 
+.listings {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  padding: 0 1%; }
+  .listings > a > div {
+    width: 21%;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    display: inline-block;
+    margin: 1.86%;
+    -webkit-box-shadow: 0 0.25px 0.25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.25px 0.25px rgba(0, 0, 0, 0.1); }
+    @media (max-width: 1200px) {
+      .listings > a > div {
+        margin: 1.82%; } }
+    @media (max-width: 992px) {
+      .listings > a > div {
+        width: 29%;
+        margin: 1.95%; } }
+    @media (max-width: 767px) {
+      .listings > a > div {
+        width: 45%;
+        margin: 1.95%; } }
+    .listings > a > div:hover > img {
+      -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      transform: scale(0.95);
+      -webkit-filter: saturate(1);
+      filter: saturate(1); }
+    .listings > a > div img {
+      -webkit-transition: 0.3s ease-out;
+      -o-transition: 0.3s ease-out;
+      transition: 0.3s ease-out;
+      -webkit-filter: saturate(0.8);
+      filter: saturate(0.8);
+      width: 80% !important; }
+    .listings > a > div .label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      position: relative; }
+      .listings > a > div .label h6 {
+        position: relative; }
+      .listings > a > div .label .cost h5 {
+        margin-top: 0px; }
+      .listings > a > div .label .cost p {
+        font-size: 0.8rem;
+        margin-top: -10px; }
+    .listings > a > div .category {
+      z-index: 2;
+      position: absolute;
+      left: -65px;
+      top: 25px;
+      font-size: 0.8rem;
+      color: #f9f9f9 !important;
+      font-weight: 700;
+      letter-spacing: 1px;
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      width: 200px; }
+      .listings > a > div .category.new {
+        background-color: #7ab08d; }
+      .listings > a > div .category.hot {
+        background-color: #a95121; }
+
 #shop {
   background-color: #f1f1f1;
-  padding-top: 109px; }
+  padding-top: 109px;
+  padding-bottom: 100px; }
+  #shop .tea-cups {
+    width: 100%;
+    -webkit-filter: saturate(0) brightness(1.1);
+    filter: saturate(0) brightness(1.1); }
+  #shop h1 {
+    margin-top: -75px;
+    left: 5px;
+    position: relative;
+    z-index: 1; }
+    @media (max-width: 992px) {
+      #shop h1 {
+        margin-top: -50px; } }
+  #shop ul {
+    padding-left: 0; }
+    #shop ul li {
+      list-style-type: none;
+      margin: 8px 0;
+      display: inline-block; }
+      #shop ul li a {
+        padding: 0.5rem 1rem;
+        letter-spacing: 1px;
+        text-decoration: none;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s; }
+        #shop ul li a:hover {
+          color: #7ab08d !important; }
+        @media (max-width: 992px) {
+          #shop ul li a {
+            font-size: 0.8rem;
+            padding: 1rem 1rem; } }
 
 #our-story {
   background-color: #f9f9f9; }
@@ -368,7 +474,8 @@ img {
   #our-story .flower-bed-two {
     -webkit-filter: brightness(0.95);
     filter: brightness(0.95);
-    margin-top: -75px; }
+    margin-top: -75px;
+    width: 100%; }
     @media (max-width: 767px) {
       #our-story .flower-bed-two {
         margin-top: 50px; } }
@@ -452,6 +559,7 @@ img {
         top: -47px;
         width: 100% !important; } }
   #health-benefits .flower-bed-two {
+    width: 100%;
     position: absolute;
     bottom: 0;
     z-index: 20; }
