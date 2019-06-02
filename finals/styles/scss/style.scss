@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb
 /////////////////
 // TEXT STYLES //
 /////////////////
-h1, h2, h5, h6 {
+h1, h2, h5 {
     font-weight: 700;
 	line-height: 1;
 }
@@ -74,6 +74,8 @@ h5 {
 }
 h6 {
 	font-size: 1.2rem;
+	font-weight: 700;
+	line-height: 1.1;
 }
 p {
 	font-size: 1.1rem;
@@ -278,7 +280,126 @@ img {
     }
 }
 }
-//navbar end
+//nav end
+
+//////////
+// CART //
+//////////
+.cart {
+.cart-btn {
+	position: absolute;
+	top: 109px;
+	transform: translateY(-50%);
+	right: 20px;
+	background-color: $black;
+	border-radius: 50px;
+	z-index: 101;
+	cursor: pointer;
+	transition: 0.2s;
+	@include mQ($sm) {
+		position: fixed;
+		top: auto;
+		bottom: -5px;
+	}
+	&:hover {
+		transform: translateY(-50%) scale(1.1);
+	}
+	p {
+		position: absolute;
+		font-size: 0.6rem;
+		background-color: $whiter;
+		padding: 1px 5px;
+		font-weight: bold;
+		border: 2px solid $black;
+		border-radius: 50px;
+		bottom: -15px;
+		left: 3px;
+		
+	}
+	i {
+		color: $lightGrey !important;
+		font-size: 1.5rem;
+		@include mQ($sm) {
+			font-size: 1.3rem;
+		}
+	}
+}
+}
+.popup {
+	height: 100vh;
+	background-color: $whiter;
+	position: fixed;
+	opacity: 0;
+	transition: 0.3s;
+	top: 0;
+	right: 0;
+	z-index: 200;
+	box-shadow: -10px 0 20px rgba(0,0,0,0.1);
+	width: 450px;
+	display: none;
+	@include mQ($xs) {
+		width: 100vw;
+	}
+	.checkout {
+		background-color: $grey;
+		border: 2px solid $grey;
+		cursor:not-allowed !important;
+		@include centerX;
+		bottom: 40px;
+		width: calc(100% - 80px);
+		&::before {
+			content: '' !important;
+		}
+		&:hover {
+			color: $white !important;
+		}
+	}
+	h6 {
+		letter-spacing: 1.5px;
+	}
+	.empty {
+		@include centerer;
+		h6 {
+			letter-spacing: 0 !important;
+		}
+	}
+}
+.popupbg {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+	display: none;
+	transition: 0.3s;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+.popupIn {
+	display: block;
+	animation: fadeIn 0.3s forwards;
+}
+.popupOut {
+	opacity: 1;
+	display: block;
+	animation: fadeOut 0.2s forwards;
+}
+
+//cart end
 
 //////////////
 // HOMEPAGE //
@@ -459,10 +580,10 @@ img {
 			}
 			.cost {
 				h5 {
-					margin-top: 0px;
+//					font-weight: 400 !important;
 				}
 				p {
-					font-size: 0.8rem;
+					font-size: 0.7rem;
 					margin-top: -10px;
 				}
 			}
@@ -838,7 +959,7 @@ img {
 	position: fixed;
 	padding: 20px;
 	bottom: 0;
-	right: 0;
+	left: 0;
 	z-index: 100;
 }
 .social {
@@ -846,6 +967,7 @@ img {
 		padding: 3px;
 		cursor: pointer;
 		transition: 0.2s;
+		float: left;
 		&:hover {
 			color: $green !important;
 		}
@@ -876,6 +998,7 @@ footer {
 		padding: 5px !important;
 		position: relative;
 		left: -5px;
+		float:none !important;
 		@include mQ($sm) {
 			font-size: 1.2rem;
 		}
