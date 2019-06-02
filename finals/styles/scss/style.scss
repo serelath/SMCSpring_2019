@@ -287,11 +287,11 @@ img {
 //////////
 .cart {
 .cart-btn {
-	position: fixed;
+	position: absolute;
 	top: 109px;
 	transform: translateY(-50%);
 	right: 2vw;
-	background-color: $brown;
+	background-color: $black;
 	border-radius: 50px;
 	z-index: 101;
 	cursor: pointer;
@@ -308,13 +308,12 @@ img {
 		transform: translateY(-50%) scale(1.1);
 	}
 	p {
-		color: $brown !important;
 		position: absolute;
 		font-size: 0.6rem;
 		background-color: $whiter;
 		padding: 1px 5px;
 		font-weight: bold;
-		border: 2px solid $brown;
+		border: 2px solid $black;
 		border-radius: 50px;
 		bottom: -15px;
 		left: 3px;
