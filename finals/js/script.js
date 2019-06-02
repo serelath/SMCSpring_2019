@@ -22,16 +22,25 @@ $(window).resize(function () {
 	
 // shop nav end
 	
-// cart
+// cart popup
 $('.cart-btn').click(function() {
 	$('.popup').addClass('popupIn');
 	$('.popupbg').addClass('popupIn');
 });
-$('.popupbg').click(function() {
+$('.popupbg, .fa-times').click(function() {
 	$('.popup').removeClass('popupIn').addClass('popupOut');
 	$('.popupbg').removeClass('popupIn').addClass('popupOut');
 	setTimeout(function(){ 
 		$('.popup').removeClass('popupOut');
 	$('.popupbg').removeClass('popupOut'); }, 200);
 });
+
+//cart add
+var itemNum = 0;
+if (itemNum == 0) {
+	$('.empty').show();
+} else {
+	$('.empty').hide();
+}
+	
 })
