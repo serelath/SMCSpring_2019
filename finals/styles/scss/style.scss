@@ -287,15 +287,18 @@ img {
 //////////
 .cart {
 .cart-btn {
-	position: absolute;
+	position: fixed;
 	top: 109px;
 	transform: translateY(-50%);
-	right: 20px;
-	background-color: $black;
+	right: 2vw;
+	background-color: $brown;
 	border-radius: 50px;
 	z-index: 101;
 	cursor: pointer;
 	transition: 0.2s;
+	@include mQ($lg) {
+		right: 20px;
+	}
 	@include mQ($sm) {
 		position: fixed;
 		top: auto;
@@ -305,12 +308,13 @@ img {
 		transform: translateY(-50%) scale(1.1);
 	}
 	p {
+		color: $brown !important;
 		position: absolute;
 		font-size: 0.6rem;
 		background-color: $whiter;
 		padding: 1px 5px;
 		font-weight: bold;
-		border: 2px solid $black;
+		border: 2px solid $brown;
 		border-radius: 50px;
 		bottom: -15px;
 		left: 3px;
@@ -959,15 +963,21 @@ img {
 	position: fixed;
 	padding: 20px;
 	bottom: 0;
-	left: 0;
+	right: 0;
 	z-index: 100;
+	@include mQ($sm) {
+		left: 0;
+		right: auto;
+	}
 }
 .social {
 	i {
 		padding: 3px;
 		cursor: pointer;
 		transition: 0.2s;
-		float: left;
+		@include mQ($sm) {
+			float: left;
+		}
 		&:hover {
 			color: $green !important;
 		}
