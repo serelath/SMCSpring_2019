@@ -165,11 +165,11 @@ img {
 .nav-container {
     position: fixed;
     z-index: 100;
-	box-shadow: 2px 0 4px rgba(0,0,0, 0.05);
+	
 .navbar {
     background-color: $white;
     position: relative;
-    
+    box-shadow: 2px 0 4px rgba(0,0,0, 0.05);
     .navbar-toggler {
         border: 0;
     }
@@ -194,6 +194,38 @@ img {
                 display: block !important;
             }
         }
+		.dropdown {
+			.dropdown-menu {
+				border: none;
+				position: fixed;
+				top: 106px;
+				left: 0;
+				width: 100vw;
+				display: none;
+				justify-content: space-around;
+				padding: 0 15%;
+				background-color: white !important;
+				@include mQ($sm) {
+					position: relative;
+					top: 0;
+				}
+				a {
+					img {
+						filter: saturate(0.8);
+						transform: 0.3s;
+						@include mQ($sm) {
+							display: none;
+						}
+					}
+					&:hover {
+						background-color: white !important;
+					}
+					&:hover img {
+						filter: saturate(1);
+					}
+				}
+			}
+		}
         .nav-item {
             display: inline-block;
             position: relative;
@@ -225,16 +257,16 @@ img {
                 color: $darkGrey !important;
                 letter-spacing: 2px;
                 font-size: 0.9rem;
-                transition: 0.2s;
-                padding: 20px 50px;
+                transition: 0.3s;
+                padding: 44px 50px;
                 @include mQ($lg) {
-                    padding: 20px 26px;
+                    padding: 44px 26px;
                 }
                 @include mQ($md) {
-                    padding: 20px 14px;
+                    padding: 44px 14px;
                 }
                 @include mQ($sm) {
-                    padding: 15px 15px;
+                    padding: 20px 15px;
                     display: inline-block ;
                 }
                 &:hover {
@@ -242,17 +274,6 @@ img {
                     
                 }
             }
-//            &:hover::before {
-//                    opacity: 1;
-//                }
-//            &::before {
-//                content: url(../../images/flower.png);
-//                position: absolute;
-//                z-index: -1;
-//                opacity: 0;
-//                transition: 0.2s;
-//                @include centerer;
-//            }
         }
     }
 }
@@ -421,13 +442,14 @@ img {
 			margin: 1.95%;
 		}
 		&:hover > img {
-			transform: scale(0.95);
-			filter: saturate(1);
+			transform: scale(1);
+			filter: saturate(0.95);
 		}
 		img {
+			transform: scale(0.95);
 			transition: 0.3s ease-out;
 			filter: saturate(0.8);
-			width: 80% !important;
+			width: 75% !important;
 		}
 		.label {
 			@include centerer;
@@ -475,6 +497,9 @@ img {
     background-color: $lightGrey;
     padding-top: 109px;
 	padding-bottom: 100px;
+	@include mQ($sm) {
+		padding-top: 68px;
+	}
 	.tea-cups {
 		width: 100%;
 		filter: saturate(0) brightness(1.1);
@@ -485,31 +510,7 @@ img {
 		position: relative;
 		z-index: 1;
 		@include mQ($sm) {
-			margin-top: -50px;
-		}
-	}
-	ul {
-		padding-left: 0;
-		li {
-			list-style-type: none;
-			margin: 8px 0;
-			display: inline-block;
-			a {
-				padding: 0.5rem 1rem;
-				letter-spacing: 2px;
-				text-decoration: none;
-				transition: 0.2s;
-				&:hover {
-					color: $green !important;
-				}
-				@include mQ($sm) {
-					font-size: 0.8rem;
-					padding: 1rem 1rem;
-				}
-				&.active {
-					color: $green !important;
-				}
-			}
+			margin-top: -35px;
 		}
 	}
 }

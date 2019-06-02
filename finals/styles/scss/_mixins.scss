@@ -17,6 +17,9 @@
 }
 
 //media query
+@mixin mQup($px) {
+    @media (min-width:$px) { @content; }
+}
 @mixin mQ($px) {
     @media (max-width:$px) { @content; }
 }
