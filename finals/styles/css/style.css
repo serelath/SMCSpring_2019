@@ -699,7 +699,8 @@ img {
 #create {
   padding-top: 100px;
   min-height: 100vh;
-  position: relative; }
+  position: relative;
+  background-color: #f1f1f1; }
   @media (max-width: 1200px) {
     #create {
       padding-top: 60px; } }
@@ -726,8 +727,8 @@ img {
     #create .text h1, #create .text h3 {
       position: relative;
       z-index: 5; }
-    #create .text h1 {
-      color: #7ab08d !important; }
+    #create .text h2 {
+      color: #1a1a1a !important; }
     #create .text h3 {
       color: #a95121 !important; }
     #create .text figure {

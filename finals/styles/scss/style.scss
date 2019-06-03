@@ -429,6 +429,7 @@ img {
 	padding-top: 100px;
 	min-height: 100vh;
 	position: relative;
+	background-color: $lightGrey;
 	@include mQ($md) {
 		padding-top: 60px;
 	}
@@ -453,8 +454,8 @@ img {
 			z-index: 5;
 			
 		}
-		h1 {
-			color: $green !important;
+		h2 {
+			color: $black !important;
 		}
 		h3 {
 			color: $brown !important;
