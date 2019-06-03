@@ -45,7 +45,7 @@
 }
 .popup {
 	height: 100vh;
-	background-color: $whiter;
+	background-color: white;
 	position: fixed;
 	opacity: 0;
 	transition: 0.3s;
@@ -53,23 +53,53 @@
 	right: 0;
 	z-index: 200;
 	box-shadow: -10px 0 20px rgba(0,0,0,0.1);
-	width: 450px;
+	width: 500px;
 	display: none;
+	overflow-y: scroll;
+	padding-bottom: 125px;
 	@include mQ($xs) {
 		width: 100vw;
 	}
+	a {
+		text-decoration: none;
+	}
+	.item {
+		position: relative;
+		i {
+			color: $darkerGrey !important;
+			padding: 10px;
+			font-size: 1rem !important;
+			transition: 0.2s;
+			&:hover {
+				color: $black !important;
+			}
+		}
+	}
+	.checkout-container {
+		width: 500px;
+		position: fixed;
+		bottom: 0;
+		height: 125px;
+		transition: 0.3s;
+		background-color: white;
+		right: 0;
+		z-index: 10;
+		@include mQ($xs) {
+			width: 100vw;
+		}
+	}
 	.checkout {
-		background-color: $grey;
-		border: 2px solid $grey;
-		cursor:not-allowed !important;
+		background-color: $black;
+		border: 2px solid $black;
 		@include centerX;
 		bottom: 40px;
 		width: calc(100% - 80px);
+		cursor: pointer;
 		&::before {
 			content: '' !important;
 		}
 		&:hover {
-			color: $white !important;
+			color: $darkGrey !important;
 		}
 	}
 	h6 {
@@ -94,6 +124,9 @@
 			font-family: $serifFont;
 		}
 	}
+}
+.disable-checkout {
+	display: none;
 }
 .popupbg {
 	position: fixed;
@@ -235,6 +268,9 @@
 #products {
 	background-color: white;
 	padding-top: 108px;
+	@include mQ($sm) {
+		padding-top: 68px;
+	}
 	h6 {
 		text-transform: uppercase;
 	}
@@ -265,6 +301,9 @@
 				position: absolute;
 				bottom: 10px;
 				right: 10px;
+			}
+			.amount {
+				text-transform: uppercase;
 			}
 		}
 	}
