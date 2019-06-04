@@ -722,7 +722,7 @@ img {
       z-index: 100; }
       @media (max-width: 1200px) {
         #home .landing .text {
-          top: 40% !important; } }
+          top: 43% !important; } }
       @media (max-width: 767px) {
         #home .landing .text {
           top: 55% !important; } }

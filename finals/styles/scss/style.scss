@@ -305,7 +305,7 @@ img {
             top: 48% !important;
             z-index: 100;
             @include mQ($md) {
-                top: 40% !important;
+                top: 43% !important;
             }
             @include mQ($xs) {
                 top: 55% !important;
