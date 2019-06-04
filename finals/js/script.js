@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	
 // shop nav
-checkWinState();	
 
 function checkWinState() {
 	if($(window).width() <= 1200) {
@@ -19,6 +18,8 @@ function checkWinState() {
 $(window).resize(function () {
     checkWinState();
 });
+	
+checkWinState();
 	
 // shop nav end
 	
