@@ -397,6 +397,10 @@
 			
 			&:hover i {
 				transform: scale(1.3);
+				
+			}
+			&:active i {
+				color: $brown !important;
 			}
 //			&:hover .category {
 //				border: 1px solid $white;
@@ -410,6 +414,7 @@
 			}
 			h5, h6, p, span, i {
 				color: $white !important;
+				user-select: none;
 			}
 			p {
 				font-family: $serifFont;
