@@ -194,7 +194,10 @@
 .listings {
   width: 100%;
   position: relative;
-  padding: 0 3% !important; }
+  padding: 0% 5% !important; }
+  @media (max-width: 992px) {
+    .listings {
+      padding: 0% 10% !important; } }
   .listings > a > div {
     width: 21%;
     cursor: pointer;
@@ -204,7 +207,10 @@
     display: inline-block;
     margin: 1.86%;
     -webkit-box-shadow: 0 0.25px 0.25px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0.25px 0.25px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 0.25px 0.25px rgba(0, 0, 0, 0.1);
+    -webkit-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    transition: 0.3s ease-out; }
     @media (max-width: 1200px) {
       .listings > a > div {
         margin: 1.82%; } }
@@ -216,9 +222,12 @@
       .listings > a > div {
         width: 45%;
         margin: 1.95%; } }
+    .listings > a > div:hover {
+      -webkit-box-shadow: 0 0.25px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0.25px 20px rgba(0, 0, 0, 0.1); }
     .listings > a > div:hover > img {
-      -webkit-filter: saturate(0.9);
-      filter: saturate(0.9); }
+      -webkit-filter: saturate(0.8);
+      filter: saturate(0.8); }
     .listings > a > div img {
       -webkit-transform: scale(0.95);
       -ms-transform: scale(0.95);
@@ -236,7 +245,7 @@
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      top: 82%;
+      top: 79%;
       width: 100%; }
       @media (max-width: 1200px) {
         .listings > a > div .label {
@@ -263,17 +272,26 @@
 
 .shop-categories {
   top: -47px;
-  background-color: #f1f1f1;
+  background-color: #1a1a1a;
   position: relative;
-  padding: 0.5vw 1vw 0vw 2.5vw; }
+  padding: 10px 30px 5px 35px; }
+  @media (max-width: 1200px) {
+    .shop-categories {
+      padding: 5px 30px 3px 33px; } }
   .shop-categories > a {
-    height: 40vh;
+    height: 35vh;
     display: inline-block;
     padding: 0 !important;
     opacity: 0.8;
     margin: -1px;
-    border: 0.5vw solid #f1f1f1;
+    border: 8px solid #1a1a1a;
     float: left; }
+    @media (max-width: 1200px) {
+      .shop-categories > a {
+        border: 4px solid #1a1a1a; } }
+    @media (max-width: 767px) {
+      .shop-categories > a {
+        height: 40vh !important; } }
     .shop-categories > a:hover::before {
       -webkit-filter: brightness(0.5);
       filter: brightness(0.5);
@@ -291,7 +309,10 @@
       -o-transition: 0.5s ease-in-out;
       transition: 0.5s ease-in-out; }
     .shop-categories > a:first-child {
-      height: 80vh !important; }
+      height: 70vh !important; }
+      @media (max-width: 767px) {
+        .shop-categories > a:first-child {
+          height: 40vh !important; } }
     .shop-categories > a:first-child::before {
       background-image: url("../../images/home/tea-category-three.jpg"); }
     .shop-categories > a:nth-child(2)::before {
@@ -336,26 +357,45 @@
       padding-top: 68px; } }
   #products h6 {
     text-transform: uppercase; }
+  #products h5 {
+    font-weight: 400 !important; }
+  #products p {
+    font-size: 1rem; }
   #products .cat {
     font-family: "EB Garamond", serif; }
+  #products .product-img {
+    -webkit-filter: saturate(0.9);
+    filter: saturate(0.9); }
   #products .options > div {
     position: relative;
-    background-color: #f9f9f9;
+    background-color: #1a1a1a;
     cursor: pointer;
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s;
-    border: 3px solid white;
-    overflow: hidden; }
-    #products .options > div:hover {
-      background-color: #f1f1f1; }
+    border: 2px solid white;
+    overflow: hidden;
+    opacity: 0.95; }
+    #products .options > div:hover i {
+      -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      transform: scale(1.3); }
     #products .options > div .category {
       font-size: 0.75rem;
       left: -70px;
-      top: 20px; }
+      top: 20px;
+      border: 1px solid #1a1a1a;
+      -webkit-transition: 0.2s;
+      -o-transition: 0.2s;
+      transition: 0.2s; }
+    #products .options > div h5, #products .options > div h6, #products .options > div p, #products .options > div span, #products .options > div i {
+      color: #f9f9f9 !important; }
     #products .options > div p {
       font-family: "EB Garamond", serif; }
     #products .options > div i {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
       -webkit-transition: 0.2s;
       -o-transition: 0.2s;
       transition: 0.2s;
@@ -368,7 +408,8 @@
     margin-top: 110px !important;
     background-color: #f1f1f1; }
     #products .suggestions h5 {
-      margin-top: -75px; }
+      margin-top: -65px;
+      font-weight: 700 !important; }
 
 * {
   -webkit-box-sizing: border-box !important;
@@ -728,7 +769,7 @@ img {
     @media (max-width: 1200px) {
       #home .samples {
         padding-bottom: 260px;
-        padding-top: 200px; } }
+        padding-top: 175px; } }
     @media (max-width: 767px) {
       #home .samples {
         padding-bottom: 190px;
@@ -784,12 +825,15 @@ img {
     #home .tea h1 {
       position: relative;
       z-index: 100;
-      top: -5px; }
+      top: 0px; }
       @media (max-width: 992px) {
         #home .tea h1 {
-          top: -10px; } }
+          top: -20px; } }
+      @media (max-width: 479px) {
+        #home .tea h1 {
+          font-size: 3rem !important; } }
     #home .tea .listings {
-      background-color: #f9f9f9;
+      background-color: #f1f1f1;
       top: -40px; }
     #home .tea .new, #home .tea .best {
       z-index: 1; }
@@ -817,7 +861,7 @@ img {
     padding-top: 40px;
     position: relative;
     margin-top: -40px;
-    background-color: white; }
+    background-color: #fcfcfc; }
     @media (max-width: 1200px) {
       #home .our-story {
         padding-top: 10px; } }

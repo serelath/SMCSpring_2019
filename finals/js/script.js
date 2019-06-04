@@ -60,7 +60,7 @@ $('.options div').click(function() {
 		$('.checkout').removeClass('disable-checkout');
 	}
 	
-	var item = $(this).parent().siblings('.label').find('h5').text();
+	var item = $('.name').text();
 	var cost = $(this).find('h5').text();
 	var oz = $(this).find('.amount').text();
 	var img = $(this).parent().parent().parent().find('.image').attr('src');

@@ -365,7 +365,7 @@ img {
 		padding-bottom: 300px;
 		@include mQ($md) {
 			padding-bottom: 260px;
-            padding-top: 200px;
+            padding-top: 175px;
 		}
 		@include mQ($xs) {
 			padding-bottom: 190px;
@@ -422,13 +422,16 @@ img {
 		h1 {
 			position: relative;
 			z-index: 100;
-			top: -5px;
+			top: 0px;
 			@include mQ($sm) {
-				top: -10px;
+				top: -20px;
+			}
+			@include mQ($xxs) {
+				font-size: 3rem !important;
 			}
 		}
 		.listings {
-			background-color: $white;
+			background-color: $lightGrey;
 			top: -40px;
 		}
 		.new, .best {
@@ -464,7 +467,7 @@ img {
         padding-top: 40px;
 		position: relative;
 		margin-top: -40px;
-        background-color: white;
+        background-color: $whiter;
         @include mQ($md) {
             padding-top: 10px;
         }
