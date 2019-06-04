@@ -618,10 +618,10 @@ img {
       z-index: 100; }
       @media (max-width: 1200px) {
         #home .landing .text {
-          top: 39% !important; } }
+          top: 40% !important; } }
       @media (max-width: 767px) {
         #home .landing .text {
-          top: 54% !important; } }
+          top: 55% !important; } }
       #home .landing .text h1::before {
         content: url("../../images/home/your-tea-leaf.png");
         -webkit-transform: translateX(-50%);
