@@ -230,7 +230,7 @@
 		img {
 			transform: scale(0.95);
 			transition: 0.3s ease-out;
-			filter: saturate(0.7);
+			filter: saturate(0.6);
 			width: 60% !important;
 		}
 		.label {
@@ -273,7 +273,7 @@
 }
 .shop-categories {
 	top: -47px;
-	background-color: $black;
+	background-color: $lightGrey;
 	position: relative;
 	padding: 10px 30px 5px 35px;
 	@include mQ($md) {
@@ -285,10 +285,10 @@
 		padding: 0 !important;
 		opacity: 0.8;
 		margin: -1px;
-		border: 8px solid $black;
+		border: 8px solid $lightGrey;
 		float: left;
 		@include mQ($md) {
-			border: 4px solid $black;
+			border: 4px solid $lightGrey;
 		}
 		@include mQ($xs) {
 			height: 40vh !important;
@@ -327,7 +327,7 @@
 			color: $whiter !important;
 			@include centerer;
 			letter-spacing: 5px;
-			text-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+			text-shadow: 0px 0px 8px rgba(0,0,0,0.3);
 		}
 		
 	}

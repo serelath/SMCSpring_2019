@@ -467,7 +467,7 @@ img {
         padding-top: 40px;
 		position: relative;
 		margin-top: -40px;
-        background-color: $whiter;
+        background-color: $white;
         @include mQ($md) {
             padding-top: 10px;
         }
@@ -490,11 +490,13 @@ img {
 			margin-top: -25px;
 		}
         .flower-bed {
+			opacity: 0.8;
             @include mQ($xs) {
                 width: 1000px !important;
             }
         }
         .herb {
+			opacity: 0.8;
             margin-left: -15px;
         }
 	}
