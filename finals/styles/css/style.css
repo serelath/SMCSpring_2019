@@ -633,8 +633,15 @@ img {
         filter: brightness(0.99); }
         @media (max-width: 992px) {
           .nav-container .navbar .navbar-nav .dropdown .dropdown-menu {
+            padding-bottom: 10px !important; } }
+        @media (max-width: 992px) {
+          .nav-container .navbar .navbar-nav .dropdown .dropdown-menu {
             position: relative;
             top: 0; } }
+        @media (max-width: 1200px) {
+          .nav-container .navbar .navbar-nav .dropdown .dropdown-menu a {
+            padding: 5px !important;
+            color: #1a1a1a !important; } }
         .nav-container .navbar .navbar-nav .dropdown .dropdown-menu a img {
           -webkit-filter: saturate(0.7);
           filter: saturate(0.7);
@@ -699,7 +706,7 @@ img {
               padding: 44px 14px; } }
           @media (max-width: 992px) {
             .nav-container .navbar .navbar-nav .nav-item a {
-              padding: 20px 15px;
+              padding: 17px 15px;
               display: inline-block; } }
           .nav-container .navbar .navbar-nav .nav-item a:hover {
             color: #1a1a1a !important; }

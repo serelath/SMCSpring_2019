@@ -216,13 +216,21 @@ img {
 				background-color: white !important;
                 filter: brightness(0.99);
 				@include mQ($sm) {
+					padding-bottom: 10px !important;
+				}
+				@include mQ($sm) {
 					position: relative;
 					top: 0;
 				}
 				a {
+					@include mQ($md) {
+							padding: 5px !important;
+						color: $black !important;
+					}
 					img {
 						filter: saturate(0.7);
 						transition: 0.2s;
+						
 						@include mQ($sm) {
 							display: none;
 						}
@@ -276,7 +284,7 @@ img {
                     padding: 44px 14px;
                 }
                 @include mQ($sm) {
-                    padding: 20px 15px;
+                    padding: 17px 15px;
                     display: inline-block ;
                 }
                 &:hover {
