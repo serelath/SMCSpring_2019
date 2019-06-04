@@ -680,11 +680,11 @@ img {
     @media (max-width: 1200px) {
       #home .samples {
         padding-bottom: 260px;
-        padding-top: 150px; } }
+        padding-top: 200px; } }
     @media (max-width: 767px) {
       #home .samples {
         padding-bottom: 190px;
-        padding-top: 125px; } }
+        padding-top: 150px; } }
     #home .samples .white-paint {
       position: absolute;
       top: -100px;

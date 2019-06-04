@@ -365,11 +365,11 @@ img {
 		padding-bottom: 300px;
 		@include mQ($md) {
 			padding-bottom: 260px;
-            padding-top: 150px;
+            padding-top: 200px;
 		}
 		@include mQ($xs) {
 			padding-bottom: 190px;
-            padding-top: 125px;
+            padding-top: 150px;
 		}
 		.white-paint {
 			position: absolute;
