@@ -41,15 +41,15 @@ h1, h2, h5 {
 	line-height: 1;
 }
 h1 {
-	font-size: 7rem;
-    letter-spacing: 15px;
+	font-size: 6.2rem;
+    letter-spacing: 18px;
     @include mQ($xs) {
         font-size: 4.5rem;
 		letter-spacing: 8px;
     }
 }
 h2 {
-    font-size: 4.7rem;
+    font-size: 4.8rem;
     letter-spacing: 7px;
     @include mQ($xs) {
         font-size: 3.1rem;
@@ -77,10 +77,16 @@ h6 {
 	font-size: 1.2rem;
 	font-weight: 700;
 	line-height: 1.1;
+    @include mQ($xs) {
+        font-size: 1rem;
+    }
 }
 p {
 	font-size: 1.1rem;
 	line-height: 1.5;
+    @include mQ($xs) {
+        font-size: 1rem;
+    }
 }
 .btn {
     background-color: $black;
@@ -167,7 +173,7 @@ img {
 }
 .nav-container {
     position: fixed;
-    z-index: 100;
+    z-index: 500;
 	
 .navbar {
     background-color: $white;
@@ -208,14 +214,15 @@ img {
 				justify-content: space-around;
 				padding: 0 15%;
 				background-color: white !important;
+                filter: brightness(0.99);
 				@include mQ($sm) {
 					position: relative;
 					top: 0;
 				}
 				a {
 					img {
-						filter: saturate(0.8);
-						transform: 0.3s;
+						filter: saturate(0.7);
+						transition: 0.2s;
 						@include mQ($sm) {
 							display: none;
 						}
@@ -224,7 +231,7 @@ img {
 						background-color: white !important;
 					}
 					&:hover img {
-						filter: saturate(1);
+						filter: saturate(0.9);
 					}
 				}
 			}
@@ -287,24 +294,98 @@ img {
 // HOMEPAGE //
 //////////////
 #home {
-	padding-top: 200px !important;
 	background-color: $lightGrey;
+    .landing {
+        padding-top: 50px;
+        min-height: calc(100vh + 50px);
+        background-color: $white;
+        position: relative;
+        .text {
+            @include centerer;
+            top: 46% !important;
+            z-index: 100;
+            @include mQ($md) {
+                top: 39% !important;
+            }
+            @include mQ($xs) {
+                top: 54% !important;
+            }
+            h1 {
+                &::before {
+                    content: url('../../images/home/your-tea-leaf.png');
+                    @include centerX;
+                    z-index: -1;
+                    margin-top: -90px;
+                    @include mQ($md) {
+                        content: url('../../images/home/your-tea-leaf-sm.png');
+                        margin-top: -50px;
+                    }
+                }
+            }
+            h3 {
+                font-size: 2.2rem;
+            }
+            .btn {
+                position: relative;
+            }
+            .teacups {
+                @include centerX;
+                margin-top: -23px;
+                z-index: 2;
+                width: 885px;
+                @include mQ($lg) {
+                    width: 765px;
+                }
+                @include mQ($sm) {
+                    width: 680px;
+                }
+                @include mQ($xs) {
+                    width: 500px;
+                }
+                @include mQ($xxs) {
+                    width: 100%;
+                }
+            }
+        }
+        .one {
+            width: 100%;
+            top: 60% !important;
+            z-index: 50;
+            @include centerY;
+            @include mQ($md) {
+                display: none;
+            }
+        }
+        
+    }
 	.samples {
+        padding-top: 300px;
 		background-color: $whiter;
 		position: relative;
 		padding-bottom: 300px;
+        @include mQ($lg) {
+            padding-top: 200px;
+        }
 		@include mQ($md) {
 			padding-bottom: 260px;
+            padding-top: 150px;
 		}
 		@include mQ($xs) {
 			padding-bottom: 190px;
+            padding-top: 125px;
 		}
 		.white-paint {
 			position: absolute;
 			top: -100px;
 			min-width: 100%;
 		}
+        .text {
+            position: relative;
+            z-index:200;
+        }
 		.sample {
+            position: relative;
+            z-index: 200;
 			@include mQ($sm) {
 				margin: auto;
 			}
@@ -315,7 +396,7 @@ img {
 			bottom: 0;
 			&.one {
 				@include centerX;
-				filter: brightness(0.95);
+				filter: brightness(0.92);
 				width: 650px;
 				@include mQ($md) {
 					width: 50%;
@@ -334,12 +415,11 @@ img {
 		}
 	}
 	.tea {
-		padding-bottom: 200px;
-		margin-top: -85px;
+		margin-top: -65px;
 		position: relative;
 		z-index: 3;
 		@include mQ($xs) {
-			margin-top: -50px;
+			margin-top: -40px;
 			padding-bottom: 100px;
 		}
 		.new, .best {
@@ -371,27 +451,22 @@ img {
 			}
 		}
 	}
-
 	.our-story {
+        padding-top: 40px;
 		position: relative;
+        background-color: $whiter;
+        @include mQ($md) {
+            padding-top: 10px;
+        }
 		.white-paint {
 			position: absolute;
-			top: -125px;
-			height: 140%;
-			@include mQ($sm) {
-				top: -90px;
-				height: 140%;
-			}
-			@include mQ($xxs) {
-				top: -70px;
-				height: 140%;
-			}
-			
+			top: -50px;
+            width: 100%;
 		}
 		.pouring-tea {
 			margin-top: 20px;
 			@include mQ($sm) {
-				margin-top: 10px;
+				margin-top: 20px;
 			}
 		}
 		h2, h3 {
@@ -401,6 +476,14 @@ img {
 		.btn {
 			margin-top: -25px;
 		}
+        .flower-bed {
+            @include mQ($xs) {
+                width: 1000px !important;
+            }
+        }
+        .herb {
+            margin-left: -15px;
+        }
 	}
 	.benefits {
 		position: relative;
@@ -429,7 +512,7 @@ img {
 	padding-top: 100px;
 	min-height: 100vh;
 	position: relative;
-	background-color: $lightGrey;
+	background-color: $white;
 	@include mQ($md) {
 		padding-top: 60px;
 	}
@@ -445,27 +528,27 @@ img {
 	.text {
 		@include centerer;
 		transform: translate(-50%, -50%) !important;
-		margin-top: -50px;
+		margin-top: -75px;
 		@include mQ($md) {
 			padding-top: 30px;
 		}
-		h1, h3 {
-			position: relative;
-			z-index: 5;
-			
-		}
-		h2 {
-			color: $black !important;
-		}
-		h3 {
-			color: $brown !important;
-		}
+        h2 {
+            &::before {
+                content: url(../../images/contact/leaf.png);
+                @include centerer;
+                z-index: -1;
+                margin-top: -115px;
+                @include mQ($sm) {
+                    margin-top: -95px;
+                }
+            }
+        }
 		figure {
 			@include centerX;
-			top: -50%;
-			width: 100vw;
+            height: 100%;
+            bottom: -150%;
 			@include mQ($md) {
-				top: -25%;
+				bottom: -125%;
 			}
 			@keyframes expand {
 				0%, 75% {
@@ -480,16 +563,17 @@ img {
 			& > div {
 				width: 3px;
 				height: 3px;
-				margin: 20px;
+				margin: 10px;
 				border-radius: 50%;
 				background-color: $black;
-				display: inline-block;
+				display: block;
 				animation: expand 3s infinite;
+                animation-delay: 0.4s; 
 				&:nth-child(2) {
 					animation-delay: 0.2s; 
 				}
 				&:nth-child(3) {
-					animation-delay: 0.4s; 
+					animation-delay: 0s; 
 				}
 			}
 		}
@@ -502,17 +586,21 @@ img {
 #our-story {
 	background-color: $white;
 	.flower-bed:first-child {
+        margin-top: -5vw;
 		width: 100%;
 		background-color: $lightGrey;
 		position: absolute;
 		z-index: 10;
+        @include mQ($lg) {
+            margin-top: 0;
+        }
 		@include mQ($md) {
 			top: 25px;
 		}
 	}
 	.flower-bed-two {
 		filter: brightness(0.95);
-		margin-top: -75px;
+		margin-top: -25px;
 		width: 100%;
 		@include mQ($xs) {
 			margin-top: 50px;
@@ -547,9 +635,9 @@ img {
 		h1 {
 			position: relative;
 			left: 7px;
-			margin-top: -70px;
+			margin-top: -40px;
 			@include mQ($xs) {
-				margin-top: -47px;
+				margin-top: -25px;
 				left: 0px;
 			}
 		}
@@ -631,7 +719,7 @@ img {
 		}
 		&:nth-child(2) {
 			width: 40vw !important;
-			top: 1750px;
+			top: 1850px;
 			@include mQ($md) {
 				top: 1850px;
 			}
@@ -742,16 +830,25 @@ img {
 // CONTACT //
 /////////////
 #contact {
-    padding: 200px 0 14vw 0;
-    background-color: $lightGrey;
+    padding: 75px 0 14vw 0;
+    background-color: $whiter;
     position: relative;
     @include mQ($lg) {
-        padding: 200px 0 200px 0;
+        padding: 75px 0 200px 0;
     }
     @include mQ($sm) {
-        padding: 140px 0 150px 0;
+        padding: 75px 0 150px 0;
+    }
+    .grey {
+        width: 100%;
+        padding-top: 200px;
+        background-color: $lightGrey;
+        @include mQ($sm) {
+            padding-top: 150px;
+        }
     }
     h2 {
+        margin-top: -75px;
         &::before {
             content: url(../../images/contact/leaf.png);
             z-index: -1;
@@ -770,9 +867,12 @@ img {
         z-index: 1;
         top: 215px;
         height: 550px;
-        @include mQ($xs) {
+        @include mQ($sm) {
             height: 675px;
-            top: 127px;
+            top: 160px;
+        }
+        @include mQ($xs) {
+            top: 140px;
         }
     }
     .flower-bed {
@@ -781,7 +881,6 @@ img {
         bottom: 0;
         width: 1300px;
         min-width: 100%;
-        filter: brightness(1.3);
         @include mQ($xs) {
             width: 1000px;
         }
@@ -821,8 +920,7 @@ img {
 	right: 0;
 	z-index: 100;
 	@include mQ($sm) {
-		left: 0;
-		right: auto;
+		display: none;
 	}
 }
 .social {

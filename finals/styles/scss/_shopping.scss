@@ -1,3 +1,6 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
 //////////
 // CART //
 //////////
@@ -9,7 +12,7 @@
 	right: 2vw;
 	background-color: $black;
 	border-radius: 50px;
-	z-index: 101;
+	z-index: 501;
 	cursor: pointer;
 	transition: 0.2s;
 	@include mQ($lg) {
@@ -25,7 +28,7 @@
 	p {
 		position: absolute;
 		font-size: 0.6rem;
-		background-color: $whiter;
+		background-color: $white;
 		padding: 1px 5px;
 		font-weight: bold;
 		border: 2px solid $black;
@@ -35,7 +38,7 @@
 		
 	}
 	i {
-		color: $lightGrey !important;
+		color: $white !important;
 		font-size: 1.5rem;
 		@include mQ($sm) {
 			font-size: 1.3rem;
@@ -51,7 +54,7 @@
 	transition: 0.3s;
 	top: 0;
 	right: 0;
-	z-index: 200;
+	z-index: 501;
 	box-shadow: -10px 0 20px rgba(0,0,0,0.1);
 	width: 500px;
 	display: none;
@@ -133,7 +136,7 @@
 	height: 100vh;
 	width: 100vw;
 	background-color: rgba(0,0,0,0.5);
-	z-index: 100;
+	z-index: 500;
 	display: none;
 	transition: 0.3s;
 }
@@ -177,7 +180,6 @@
 	}
 	.tea-cups {
 		width: 100%;
-		filter: saturate(0) brightness(1.1);
 	}
 	h1 {
 		margin-top: -75px;
@@ -192,13 +194,14 @@
 .listings {
 	width: 100%;
 	position: relative;
-	padding: 0 1%;
+	padding: 0 3% !important;
 	& > a > div {
-		width: 21%;
+        width: 21%;
+//		width: 28%;
 		cursor: pointer;
-		overflow: hidden;
 		position: relative;
 		background-color: white;
+        overflow: hidden;
 		display: inline-block;
 		margin: 1.86%;
 		box-shadow: 0 .25px .25px rgba(0,0,0,0.1);
@@ -214,25 +217,45 @@
 			margin: 1.95%;
 		}
 		&:hover > img {
-			transform: scale(1);
-			filter: saturate(0.95);
+//			transform: scale(1);
+			filter: saturate(0.9);
 		}
 		img {
 			transform: scale(0.95);
 			transition: 0.3s ease-out;
-			filter: saturate(0.8);
-			width: 75% !important;
+			filter: saturate(0.7);
+			width: 60% !important;
 		}
 		.label {
 			@include centerer;
-			position: relative;
+            top: 82%;
+            width: 100%;
+            @include mQ($md) {
+                top: 79%;
+            }
 			h6 {
 				position: relative;
+                font-size: 1rem !important;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                @include mQ($sm) {
+                    font-size: 0.8rem !important;
+                }
 			}
+            h5 {
+                font-size: 1rem !important;
+                font-family: $serifFont !important;
+                font-weight: 400 !important;
+            }
 			.cost {
-				h5 {
+				h5, p, h6 {
+                    text-align: left !important;
+                    
 //					font-weight: 400 !important;
 				}
+                h5, p {
+                    display: inline-block;
+                }
 				p {
 					font-size: 0.7rem;
 					margin-top: -10px;
@@ -246,6 +269,8 @@
 	position: absolute;
 	left: -65px;
 	top: 25px;
+//    top: 5px;
+//    left: 5px;
 	font-size: 0.8rem;
 	color: $white !important;
 	font-weight: 700;
@@ -280,13 +305,13 @@
 	.options {
 		& > div {
 			position: relative;
-			background-color: $lightGrey;
+			background-color: $white;
 			cursor: pointer;
 			transition: 0.2s;
 			border: 3px solid white;
 			overflow: hidden;
 			&:hover {
-				background-color: $white;
+				background-color: $lightGrey;
 			}
 			.category {
 				font-size: 0.75rem;
