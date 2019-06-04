@@ -365,7 +365,7 @@ img {
 		padding-bottom: 300px;
 		@include mQ($md) {
 			padding-bottom: 260px;
-            padding-top: 175px;
+            padding-top: 75px;
 		}
 		@include mQ($xs) {
 			padding-bottom: 190px;

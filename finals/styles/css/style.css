@@ -784,7 +784,7 @@ img {
     @media (max-width: 1200px) {
       #home .samples {
         padding-bottom: 260px;
-        padding-top: 175px; } }
+        padding-top: 75px; } }
     @media (max-width: 767px) {
       #home .samples {
         padding-bottom: 190px;
