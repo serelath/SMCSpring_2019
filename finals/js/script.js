@@ -2,24 +2,21 @@ $(document).ready(function() {
 	
 // shop nav
 
-function checkWinState() {
-	if($(window).width() <= 1200) {
-	   $('.dropdown').click(function() {
-			$('.dropdown-menu').toggle();
-		});
-	} else {
-		$('.dropdown').hover(function() {
+	$('.dropdown').hover(function() {
+		if($(window).width() > 1200) {
 			$('.dropdown-menu').css('display', 'flex');
-		}, function() {
+		}
+	}, function() {
+		if($(window).width() > 1200) {
 			$('.dropdown-menu').css('display', 'none');
-		})
+		}
+	});
+
+$('.dropdown').click(function() {
+	if($(window).width() <= 1200) {
+		$('.dropdown-menu').toggle();
 	}
-}
-$(window).resize(function () {
-    checkWinState();
 });
-	
-checkWinState();
 	
 // shop nav end
 	

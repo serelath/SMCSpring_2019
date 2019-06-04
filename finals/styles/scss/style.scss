@@ -176,7 +176,7 @@ img {
     z-index: 500;
 	
 .navbar {
-    background-color: $whiter;
+    background-color: $white;
     position: relative;
     box-shadow: 2px 0 4px rgba(0,0,0, 0.05);
     .navbar-toggler {
@@ -298,7 +298,7 @@ img {
     .landing {
         padding-top: 50px;
         min-height: calc(100vh + 50px);
-        background-color: $white;
+        background-color: $whiter;
         position: relative;
         .text {
             @include centerer;

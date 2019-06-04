@@ -285,7 +285,8 @@
     opacity: 0.8;
     margin: -1px;
     border: 8px solid #f1f1f1;
-    float: left; }
+    float: left;
+    overflow: hidden; }
     @media (max-width: 1200px) {
       .shop-categories > a {
         border: 4px solid #f1f1f1; } }
@@ -293,9 +294,11 @@
       .shop-categories > a {
         height: 40vh !important; } }
     .shop-categories > a:hover::before {
-      -webkit-filter: brightness(0.5);
-      filter: brightness(0.5);
-      background-size: 103%; }
+      -webkit-filter: brightness(0.6);
+      filter: brightness(0.6);
+      -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+      transform: scale(1.03); }
     .shop-categories > a::before {
       content: '';
       height: 100%;
@@ -303,8 +306,12 @@
       position: absolute;
       left: 0;
       top: 0;
-      background-size: 100%;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       -webkit-transition: 0.5s ease-in-out;
       -o-transition: 0.5s ease-in-out;
       transition: 0.5s ease-in-out; }
@@ -578,7 +585,7 @@ img {
   position: fixed;
   z-index: 500; }
   .nav-container .navbar {
-    background-color: #fcfcfc;
+    background-color: #f9f9f9;
     position: relative;
     -webkit-box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05); }
@@ -694,7 +701,7 @@ img {
   #home .landing {
     padding-top: 50px;
     min-height: calc(100vh + 50px);
-    background-color: #f9f9f9;
+    background-color: #fcfcfc;
     position: relative; }
     #home .landing .text {
       position: absolute;
