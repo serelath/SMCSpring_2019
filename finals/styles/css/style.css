@@ -261,6 +261,54 @@
         font-size: 0.7rem;
         margin-top: -10px; }
 
+.shop-categories {
+  top: -47px;
+  background-color: #f1f1f1;
+  position: relative;
+  padding: 0.5vw 1vw 0vw 2.5vw; }
+  .shop-categories > a {
+    height: 40vh;
+    display: inline-block;
+    padding: 0 !important;
+    opacity: 0.8;
+    margin: -1px;
+    border: 0.5vw solid #f1f1f1;
+    float: left; }
+    .shop-categories > a:hover::before {
+      -webkit-filter: brightness(0.5);
+      filter: brightness(0.5);
+      background-size: 103%; }
+    .shop-categories > a::before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-size: 100%;
+      background-position: center;
+      -webkit-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out; }
+    .shop-categories > a:first-child {
+      height: 80vh !important; }
+    .shop-categories > a:first-child::before {
+      background-image: url("../../images/home/tea-category-three.jpg"); }
+    .shop-categories > a:nth-child(2)::before {
+      background-image: url("../../images/home/tea-category-two.jpg"); }
+    .shop-categories > a:nth-child(3)::before {
+      background-image: url("../../images/home/tea-category-one.png"); }
+    .shop-categories > a h6 {
+      color: #fcfcfc !important;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      letter-spacing: 5px;
+      text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); }
+
 .category {
   z-index: 2;
   position: absolute;
@@ -489,7 +537,7 @@ img {
   position: fixed;
   z-index: 500; }
   .nav-container .navbar {
-    background-color: #f9f9f9;
+    background-color: #fcfcfc;
     position: relative;
     -webkit-box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05); }
@@ -694,7 +742,9 @@ img {
       z-index: 200; }
     #home .samples .sample {
       position: relative;
-      z-index: 200; }
+      z-index: 200;
+      -webkit-filter: saturate(0.8);
+      filter: saturate(0.8); }
       @media (max-width: 992px) {
         #home .samples .sample {
           margin: auto; } }
@@ -725,13 +775,22 @@ img {
           #home .samples .tea-flower.two {
             display: none; } }
   #home .tea {
-    margin-top: -65px;
+    margin-top: -60px;
     position: relative;
     z-index: 3; }
     @media (max-width: 767px) {
       #home .tea {
-        margin-top: -40px;
-        padding-bottom: 100px; } }
+        margin-top: -40px; } }
+    #home .tea h1 {
+      position: relative;
+      z-index: 100;
+      top: -5px; }
+      @media (max-width: 992px) {
+        #home .tea h1 {
+          top: -10px; } }
+    #home .tea .listings {
+      background-color: #f9f9f9;
+      top: -40px; }
     #home .tea .new, #home .tea .best {
       z-index: 1; }
     #home .tea .new h3::before {
@@ -757,7 +816,8 @@ img {
   #home .our-story {
     padding-top: 40px;
     position: relative;
-    background-color: #fcfcfc; }
+    margin-top: -40px;
+    background-color: white; }
     @media (max-width: 1200px) {
       #home .our-story {
         padding-top: 10px; } }

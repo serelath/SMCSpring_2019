@@ -264,6 +264,55 @@
 		}
 	}
 }
+.shop-categories {
+	top: -47px;
+	background-color: $lightGrey;
+	position: relative;
+	padding: 0.5vw 1vw 0vw 2.5vw;
+	& > a {
+		height: 40vh;
+		display: inline-block;
+		padding: 0 !important;
+		opacity: 0.8;
+		margin: -1px;
+		border: 0.5vw solid $lightGrey;
+		float: left;
+		&:hover::before {
+			filter: brightness(0.5);
+			background-size: 103%;
+		}
+		&::before {
+			content: '';
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-size: 100%;
+			background-position: center;
+			transition: 0.5s ease-in-out;
+		}
+		&:first-child {
+			height: 80vh !important;
+		}
+		&:first-child::before {
+			background-image: url('../../images/home/tea-category-three.jpg');
+		}
+		&:nth-child(2)::before {
+			background-image: url('../../images/home/tea-category-two.jpg');
+		}
+		&:nth-child(3)::before {
+			background-image: url('../../images/home/tea-category-one.png');
+		}
+		h6 {
+			color: $whiter !important;
+			@include centerer;
+			letter-spacing: 5px;
+			text-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+		}
+		
+	}
+}
 .category {
 	z-index: 2;
 	position: absolute;

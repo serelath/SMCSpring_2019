@@ -176,7 +176,7 @@ img {
     z-index: 500;
 	
 .navbar {
-    background-color: $white;
+    background-color: $whiter;
     position: relative;
     box-shadow: 2px 0 4px rgba(0,0,0, 0.05);
     .navbar-toggler {
@@ -383,6 +383,7 @@ img {
 		.sample {
             position: relative;
             z-index: 200;
+			filter: saturate(0.8);
 			@include mQ($sm) {
 				margin: auto;
 			}
@@ -412,12 +413,23 @@ img {
 		}
 	}
 	.tea {
-		margin-top: -65px;
+		margin-top: -60px;
 		position: relative;
 		z-index: 3;
 		@include mQ($xs) {
 			margin-top: -40px;
-			padding-bottom: 100px;
+		}
+		h1 {
+			position: relative;
+			z-index: 100;
+			top: -5px;
+			@include mQ($sm) {
+				top: -10px;
+			}
+		}
+		.listings {
+			background-color: $white;
+			top: -40px;
 		}
 		.new, .best {
 			z-index: 1;
@@ -451,7 +463,8 @@ img {
 	.our-story {
         padding-top: 40px;
 		position: relative;
-        background-color: $whiter;
+		margin-top: -40px;
+        background-color: white;
         @include mQ($md) {
             padding-top: 10px;
         }
