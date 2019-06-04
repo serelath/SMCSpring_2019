@@ -302,7 +302,7 @@ img {
         position: relative;
         .text {
             @include centerer;
-            top: 46% !important;
+            top: 48% !important;
             z-index: 100;
             @include mQ($md) {
                 top: 39% !important;
@@ -364,7 +364,7 @@ img {
 		position: relative;
 		padding-bottom: 300px;
         @include mQ($lg) {
-            padding-top: 200px;
+            padding-top: 250px;
         }
 		@include mQ($md) {
 			padding-bottom: 260px;

@@ -614,7 +614,7 @@ img {
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      top: 46% !important;
+      top: 48% !important;
       z-index: 100; }
       @media (max-width: 1200px) {
         #home .landing .text {
@@ -679,7 +679,7 @@ img {
     padding-bottom: 300px; }
     @media (max-width: 1600px) {
       #home .samples {
-        padding-top: 200px; } }
+        padding-top: 250px; } }
     @media (max-width: 1200px) {
       #home .samples {
         padding-bottom: 260px;
