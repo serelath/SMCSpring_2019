@@ -224,7 +224,7 @@ img {
 				}
 				a {
 					@include mQ($md) {
-							padding: 5px !important;
+						padding: 5px !important;
 						color: $black !important;
 					}
 					img {
@@ -284,7 +284,7 @@ img {
                     padding: 44px 14px;
                 }
                 @include mQ($sm) {
-                    padding: 17px 15px;
+                    padding: 18px 15px;
                     display: inline-block ;
                 }
                 &:hover {
