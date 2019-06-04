@@ -363,9 +363,6 @@ img {
 		background-color: $whiter;
 		position: relative;
 		padding-bottom: 300px;
-        @include mQ($lg) {
-            padding-top: 250px;
-        }
 		@include mQ($md) {
 			padding-bottom: 260px;
             padding-top: 150px;

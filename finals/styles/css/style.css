@@ -677,9 +677,6 @@ img {
     background-color: #fcfcfc;
     position: relative;
     padding-bottom: 300px; }
-    @media (max-width: 1600px) {
-      #home .samples {
-        padding-top: 250px; } }
     @media (max-width: 1200px) {
       #home .samples {
         padding-bottom: 260px;
